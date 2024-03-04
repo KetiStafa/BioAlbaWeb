@@ -1,8 +1,81 @@
 *{
     margin: 0;
 }
-.div{
-    height: 2000px;
-    width: 200px;
-    background-color: red;
+.pjesaNavit{
+    background-color: purple;
+    width: 100%;
+    height: 200px;
 }
+.hFillimi{
+    color: rgb(17,119,51);
+}
+.trupi{
+    
+    width: 100%;
+    height: 2000px;
+}
+.shkrimi {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    font-weight: 500;
+    color: rgb(57,57,57);
+  }
+  .shkrimi h1{
+    text-align: center;
+    padding: 20px 40px 10px 40px;
+  }
+  .shkrimi .pUnder{
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+.p1,.p2, .p3, .p4, .p5, .p6, .p7 {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .shkrimi img{
+    height: 100px;
+    width: 100px;
+  }
+  .icon-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    margin-right: 20px;
+}
+.scallop-down{
+    height:100px;
+    width:100%;
+    background: radial-gradient(circle at 50% 0, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
+    background-size: 49px 100%;
+  }
+  
+  
+  /*----------------*/
+  /*  SCALLOP up    */
+  /*----------------*/
+  .scallop-up{
+    height:100px;
+    width:100%;
+    background: radial-gradient(circle at 50% 100%, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
+    background-size: 49px 100%;
+  }
+  .ourJourney{
+    background-color: #369A7E;
+    text-align: center;
+    color: white;
+  }
+  .ourJourney p{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    font-weight: 500;
+    color: white;
+    
+  }
+  
