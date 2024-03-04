@@ -138,13 +138,18 @@
     
   }
   .otherServices{
+    margin-top: 50px;
+    margin-bottom: 70px;
     text-align: center;
   }
   .otherServices p{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px 40px;
     font-weight: 500;
     color: rgb(57,57,57);
+  }
+  .whereWeOperate{
+    background-color: #369A7E;
   }
   
