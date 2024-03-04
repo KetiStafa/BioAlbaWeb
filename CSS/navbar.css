@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     background: #232323;
-    color: #cdcdcd;
+    color: #e3d5d5;
     padding: 20px;
     z-index: 1;
     height: 100px;
@@ -21,18 +21,21 @@ body {
   .menu-logo {
     line-height: 0;
     margin: 0 10px;
+    display:flex;
+    align-items: center;
   }
   
   .menu-logo img {
     max-height: 400px;
     max-width: 150px;
     flex-shrink: 0;
+    margin-right: 10px;
   }
 
-  .menu-container h3{
+  .menu-logo h3{
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
-    margin-left: 90px;
+    margin: 0;
   }
   
   .menu-container a {
@@ -103,10 +106,11 @@ body {
   
   .menu ul {
     list-style: none;
+    display:flex;
   }
   
   .menu li {
-    padding: 10px 0;
+    padding: 10px 20px;
     font-size: 22px;
   }
   
@@ -114,12 +118,12 @@ body {
   @media only screen and (max-width: 767px) { 
     .menu-container {
       flex-direction: column;
-      align-items: flex-end;
-      height: 60px;
+      align-items: flex-start;
+      height: auto;
     }
 
     .menu-container h3 {
-        margin-left: 0; /* Adjust the margin for mobile screens */
+        margin-left: 20px; /* Adjust the margin for mobile screens */
      }
 
     .menu-logo {
