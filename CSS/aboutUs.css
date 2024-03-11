@@ -104,7 +104,7 @@
   
   .icon img{
     font-size: 30px;
-    margin-right: 40px; 
+    margin-right: 60px; 
     filter: grayscale(100%); 
     transition: filter 0.3s ease-in-out; 
     
@@ -131,7 +131,7 @@
     margin: 20 auto;
   }
   .container:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); 
+    box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.9); 
     background: linear-gradient(to right, rgba(90, 99, 90, 0.442) 0%, rgba(176, 255, 176, 0.5) 80%);
     color: white;
     cursor: pointer;
@@ -152,4 +152,21 @@
   .whereWeOperate{
     background-color: #369A7E;
   }
+  .contWhereWeOp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.whereWeOperate {
+    width: 45%;
+    margin-right: 20px;
+    text-align: center;
+}
+.whereWeOperate h2{
+    margin-bottom: 30px;
+}
+.map {
+    background-color: #369A7E;
+    width: 45%;
+}
   
