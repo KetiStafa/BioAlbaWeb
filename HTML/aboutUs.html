@@ -201,28 +201,55 @@
         <div class="scallop-up"></div>
 
         <div class="contWhereWeOp">
+            
             <div class="whereWeOperate">
                 <h2>Where We Operate</h2>
-                    <!-- Peshkopi
-                    Koplik
-                    Kamëz
-                    Tiranë
-                    Gramsh
-                    Pogradec
-                    Bilisht -->
-                    <p>Based in Albania, we are proud to serve the European market with our high-quality organic products. </p>
+                
+                <p>Based in Albania, we are proud to serve the European market with our high-quality organic products. </p>
+                <p class="vendet">Krrabë, Tiranë</p>    
+                    
             </div>
-            <div class="map">
-                <!-- Insert your Google Map embed code here -->
-                <!-- Example: -->
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.865575234228!2d-0.1304090851354691!3d51.50336447963427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604cecf0f3d23%3A0x8dd19857c646b141!2sBig+Ben!5e0!3m2!1sen!2suk!4v1547491629989" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+            <div class="mapContainer">
+                
+                <div id="map"></div>
             </div>
+            
         </div>
 
         <div class="scallop-down"></div>
 
         <div class="howWeWork">
+                <h2>How we work</h2>
+                <p>We have a reputable group of professionals with trustworthy credentials in the organic
+                     sector at the national and international levels.
+                     By paying attention to traceability, we act as a guardian of the product line from the field to the client. </p>
 
+                     <div class="containerHowWeWork">
+                    
+
+                      <div class="panel active" style="background-image: url('../Photos/foto1.jpeg')">
+                        <div class="cont">
+                          <h4>Clear Work System</h4>
+                        <p>We apply a transparent and efficient system of cultivation and wild collection, processing and quality control.</p>
+                        </div>
+                        
+                      </div>
+                      <div class="panel" style="background-image: url('../Photos/foto2.jpeg')">
+                        <div class="cont">
+                          <h4>Community Coordination</h4>
+                        <p>Our growers work in groups coordinated by master farmers.
+                           These groups have targets and are monitored internally with continuous support and technical advice.</p>
+                      </div>
+                        </div>
+                        
+                      <div class="panel" style="background-image: url('../Photos/foto3.jpeg')">
+                        <div class="cont"><h4>Certification and Analysis</h4>
+                        <p>Our internal control system, coupled with accredited lab analysis, ensures that our products meet stringent organic production requirements before they reach our clients.
+                           We are very strict on proper internal inspections and compliance. </p></div>
+                        
+                      </div>
+                      
+                    </div>
         </div>
 
             
@@ -242,17 +269,17 @@
 
         <div>
           <i class="fa fa-map-marker"></i>
-          <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+          <p><span>BioAlba Group Headquarters</span> Rr. Leke Dukagjini, 200/72, Kamez, Tirana, Albania.</p>
         </div>
 
         <div>
           <i class="fa fa-phone"></i>
-          <p>+1.555.555.5555</p>
+          <p>+355(0)682062262</p>
         </div>
 
         <div>
           <i class="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">support@company.com</a></p>
+          <p><a href="mailto:support@company.com">info@bioalba.al</a></p>
         </div>
         
       </div>
@@ -261,7 +288,7 @@
 
         <p class="footer-company-about">
           <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+          Bioalba Group is a community of dedicated small and medium sized farmers working relentlessly to produce and cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on producing quality more than quantity, we are committed to promoting organic excellence while contributing to a sustainable and socially responsible future.
         </p>
 
         <div class="footer-icons">
@@ -270,7 +297,37 @@
         </div>
 
       </div>
-      <p class="footer-company-name">Copyright © 2024 | BioAlba Group Sh.P.K. | All Rights Reserved</p>
+      <p class="footer-company-name">Copyright © <span id="year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved</p>
     </footer>
+    <script src="../JS/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+  const panels = document.querySelectorAll('.panel');
+
+  // Function to remove active classes from all panels and their corresponding cont elements
+  function removeActiveClasses() {
+    panels.forEach(panel => {
+      panel.classList.remove('active');
+      panel.querySelector('.cont').classList.remove('dark-overlay');
+    });
+  }
+
+  panels.forEach(panel => {
+    panel.addEventListener('click', () => {
+      removeActiveClasses();
+
+      panel.classList.add('active');
+      panel.querySelector('.cont').classList.add('dark-overlay');
+    });
+  });
+
+  // Add dark-overlay class to the cont of initially active panel
+  const initiallyActivePanel = document.querySelector('.panel.active');
+  initiallyActivePanel.querySelector('.cont').classList.add('dark-overlay');
+});
+    </script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">
+</script>
 </body>
 </html>

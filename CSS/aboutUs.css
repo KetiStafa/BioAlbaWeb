@@ -149,24 +149,176 @@
     font-weight: 500;
     color: rgb(57,57,57);
   }
-  .whereWeOperate{
-    background-color: #369A7E;
-  }
+  
   .contWhereWeOp {
     display: flex;
+    flex-direction: row; /* Reverse the order of flex items */
     justify-content: space-between;
     align-items: flex-start;
+    background-color: #369A7E;
 }
+
 .whereWeOperate {
+    color: white;
     width: 45%;
-    margin-right: 20px;
     text-align: center;
+    padding: 20px; /* Add some padding for better spacing */
+    box-sizing: border-box; /* Include padding in the width */
+
 }
+.whereWeOperate p{
+    font-weight: 600;
+}
+.whereWeOperate .vendet{
+    padding-top: 40px;
+}
+.whereWeOperate .vendet::before{
+    content: "•  ";
+    
+}
+
+#map {
+    width: 100%; /* Set the map width to 100% to fit the container */
+    height: 400px; /* Set a fixed height for the map */
+    
+    
+}
+
 .whereWeOperate h2{
     margin-bottom: 30px;
 }
-.map {
-    background-color: #369A7E;
-    width: 45%;
+.mapContainer{
+    width: 50%;
+    text-align: center;
+    align-items: flex-start;
+    
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+
 }
+
+.howWeWork{
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: center;
+    
+}
+.howWeWork p{
+    text-align: center;
+    
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px 40px;
+    
+}
+
+.containerHowWeWork {
+  display: flex;
+  width: 100%;
+}
+
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  
+  color: #fff;
+  cursor: pointer;
+  flex: 1;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+}
+
+/* .panel h4 {
+  font-size: 30px;
+  position: absolute;
+  bottom: 50%;
+  left: 10px;
+  padding-bottom: 30px;
+  margin: 0;
+  opacity: 0;
+} */
+.panel h4{
+  font-size: 20px;
+  padding-bottom: 2%;
+}
+.panel p {
+  font-size: 16px;
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  
+  margin: 0;
+  opacity: 0;
+  width: calc(100% - 100px);
+}
+@media (max-width:1000px) and (min-width:700px) {
+  .panel p {
+    font-size: 16px;
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  
+  margin: 0;
+  opacity: 0;
+  width: calc(100% - 100px);
+  padding-bottom: calc(15px + (100vw - 700px) * (15 - 30) / (700 -  1000));
+  }
+}; 
+@media (max-width: 1000px) and (min-width: 700px) {
+  .panel.active .cont {
+    bottom: 0; /* Move the container back into view */
+  }
+
+  .panel.active .cont.dark-overlay {
+    height: 0; /* Reduce the height of the dark overlay */
+  }
+
+  .panel.active .cont p {
+    bottom: 100%; /* Move the paragraph offscreen */
+  }
+  .panel.active h4{
+    padding-bottom: calc(15px + (100vw - 700px) * (15 - 30) / (700 -  1000));
+  }
+}
+
+.panel.active {
+  flex: 3;
+}
+
+.panel.active h4{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.panel.active p{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s ;
+}
+.cont {
+  padding: 20px;
+  color: white;
+}
+
+.panel {
+  position: relative;
+}
+
+.panel .cont {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* border-radius: 0 0 50px 50px; */
+  transition: background-color 0.3s ease; 
+}
+
+.dark-overlay {
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  
+}
+
   
