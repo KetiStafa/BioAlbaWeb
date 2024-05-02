@@ -35,11 +35,13 @@
                     <li><a href="#home">News</a></li>
                   </ul>
                 </div>
-              </nav>
+                
+            </nav>
+
                 <header class="header">
                     
                     <img src="../Photos/Field.jpeg" alt="Field image" class="background">
-                    <div class="foreground"></div>
+                    
                     <h1 class="title">Rooted in Albania, Serving Europe</h1>
                 </header>
 
@@ -47,7 +49,7 @@
             <!-- Trupi posht -->
         
         
-    
+                
             <div class="section">
                 <div class="content">
                     <h4>Our Products</h4>
@@ -67,7 +69,9 @@
             </div>
             <div class="scallop-down"></div>
 
+            <div class="bgList">
 
+            
             <h2 class="productH2">Product's List</h2>
 
             <div class="search-container">
@@ -1001,7 +1005,7 @@
                   
                 </ul>
               </div>
-
+        </div>
 
             <!-- Trupi lart -->
 
@@ -1078,6 +1082,19 @@
     }
   }
 });
+
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var headerHeight = document.querySelector('.header').clientHeight;
+
+    if (scrollPosition >= headerHeight) {
+        document.querySelector('.background').classList.add('scroll');
+    } else {
+        document.querySelector('.background').classList.remove('scroll');
+    }
+});
+
+
 
 
     </script>

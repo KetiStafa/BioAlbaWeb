@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
     transform-style: preserve-3d;
     z-index: -1;
 }
@@ -46,7 +46,18 @@ body {
     width: 100vw;
     object-fit: cover;
     z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
 }
+
+.overlap{
+    z-index: 2;
+    background-color: white;
+}
+
+
 .content{
     text-align: center;
     color: white;
@@ -69,7 +80,7 @@ body {
     display: flex;
     justify-content: center; /* Center items horizontally */
     max-width: 100%;
-    display: flex;
+    
     
 }
 
@@ -113,6 +124,9 @@ body {
   }
   .productH2{
     text-align: center;
+    margin: 0;
+    background-color: white;
+    padding-bottom: 25px;
   }
 
 
@@ -138,6 +152,7 @@ body {
   }
   
   
+  
   .responsive-table {
     
     li{
@@ -147,7 +162,7 @@ body {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
-      
+      z-index: 2;
     }
     
     
@@ -161,6 +176,7 @@ body {
         background-color: transparent; 
         transition: background-color 0.4s ease-in-out; 
         position: relative;
+        z-index: 2;
     }
     .table-row:nth-child(odd)::before {
         content: ''; /* Required for pseudo-element */
@@ -172,7 +188,7 @@ body {
         border-radius: 3px;
         background-color: #369A7E; /* Initial background color */
         transition: left 0.4s ease-in-out; /* Transition effect for left property */
-        z-index: -1;
+        z-index: 1;
         
       }
       .table-row:nth-child(even)::before {
@@ -185,14 +201,14 @@ body {
         border-radius: 3px;
         background-color: #369A7E; /* Initial background color */
         transition: left 0.4s ease-in-out; /* Transition effect for left property */
-        z-index: -1;
+        z-index: 1;
       }
       
       .table-row:hover {
         color: white;
         cursor: pointer;
         border-radius: 3px;
-        
+        z-index: 0;
       }
       
       
@@ -217,11 +233,7 @@ body {
     
     
     @media all and (max-width: 767px) {
-      .background{
-        position:relative;
-        object-fit: cover;
-        
-      }
+      
       
       li {
         display: block;
@@ -267,3 +279,54 @@ body {
     outline: none; 
     border-bottom: 1px solid #369A7E; 
   }
+  .bgList{
+    background-color: white;
+  }
+
+  /* Media query for phones */
+@media only screen and (max-width: 767px) {
+    .header {
+        height: 50vh;
+        width: 100vw;
+        margin: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        z-index: -1;
+    }
+
+    .background {
+        
+        height: 120vh; 
+        width: 100vw; 
+        object-fit: cover;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        padding-bottom: 50rem; /* Adjust this for the background image*/
+        
+    }
+    .title{
+        font-size: 1.2rem;
+        /* max-width: 50vw; */
+        
+    }
+    .photo {
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column; 
+        max-width: 100%;
+    }
+
+    .photo img {
+        width: 70vw;
+        height: 20vh; 
+        border-radius: 15px;
+        margin: 10px 0; 
+        box-shadow: 5px 5px 5px rgb(27, 26, 26);
+    }
+}

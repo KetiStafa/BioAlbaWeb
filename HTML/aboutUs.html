@@ -11,30 +11,31 @@
     <title>About Us</title>
 </head>
 <body>
-    <nav class="menu-container">
-        <!-- burger menu -->
-        <input type="checkbox" aria-label="Toggle menu" />
-        <span></span>
-        <span></span>
-        <span></span>
+  <nav class="menu-container">
+    <!-- burger menu -->
+    <input type="checkbox" aria-label="Toggle menu" />
+    <span></span>
+    <span></span>
+    <span></span>
+  
+    <!-- logo -->
+    <a href="#" class="menu-logo">
+      <img src="../Photos/logo.png" alt="Logo"/>
       
-        <!-- logo -->
-        <a href="#" class="menu-logo">
-          <img src="../Photos/logo.png" alt="Logo"/>
-          
-        </a>
+    </a>
 
-        <!-- menu items -->
-        <div class="menu">
-        <h3>Go Organic, Improve Lives</h3>  
-          <ul>
-            <li><a href="main.html">Home</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-            <li><a href="../HTML/products.html">Products</a></li>
-            <li><a href="#home">News</a></li>
-          </ul>
-        </div>
-      </nav>
+    <!-- menu items -->
+    <div class="menu">
+    <h3>Go Organic, Improve Lives</h3>  
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="../HTML/products.html">Products</a></li>
+        <li><a href="#home">News</a></li>
+      </ul>
+    </div>
+    
+</nav>
     
     <div class="trupi">
         	<div class="shkrimi">
@@ -220,36 +221,70 @@
 
         <div class="howWeWork">
                 <h2>How we work</h2>
-                <p>We have a reputable group of professionals with trustworthy credentials in the organic
+                <p class="p">We have a reputable group of professionals with trustworthy credentials in the organic
                      sector at the national and international levels.
                      By paying attention to traceability, we act as a guardian of the product line from the field to the client. </p>
 
                      <div class="containerHowWeWork">
-                    
-
-                      <div class="panel active" style="background-image: url('../Photos/foto1.jpeg')">
-                        <div class="cont">
-                          <h4>Clear Work System</h4>
-                        <p>We apply a transparent and efficient system of cultivation and wild collection, processing and quality control.</p>
-                        </div>
-                        
+                      <div class="flip-card">
+                  
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              
+                              <img src="../Photos/foto1.jpeg" alt="Avatar" class="image">
+                              <h3 class="h3CardFront">Clear Work System</h3>
+                              
+                            </div>
+                            
+                            <div class="flip-card-back">
+                              
+                              <p class="pBack">We apply a transparent and efficient system of cultivation and wild collection, processing and quality control.</p>
+                              
+                            </div>
+                          </div>
+                          
                       </div>
-                      <div class="panel" style="background-image: url('../Photos/foto2.jpeg')">
-                        <div class="cont">
-                          <h4>Community Coordination</h4>
-                        <p>Our growers work in groups coordinated by master farmers.
-                           These groups have targets and are monitored internally with continuous support and technical advice.</p>
+                      <div class="flip-card">
+                  
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              
+                              <img src="../Photos/foto2.jpeg" alt="Avatar" class="image">
+                              <h3 class="h3CardFront">Community Coordination</h3>
+                              
+                            </div>
+                            
+                            <div class="flip-card-back">
+                              
+                              <p class="pBack">Our growers work in groups coordinated by master farmers.
+                                  These groups have targets and are monitored internally with continuous support and technical advice.
+                              </p>
+                              
+                            </div>
+                          </div>
+                          
                       </div>
-                        </div>
-                        
-                      <div class="panel" style="background-image: url('../Photos/foto3.jpeg')">
-                        <div class="cont"><h4>Certification and Analysis</h4>
-                        <p>Our internal control system, coupled with accredited lab analysis, ensures that our products meet stringent organic production requirements before they reach our clients.
-                           We are very strict on proper internal inspections and compliance. </p></div>
-                        
+                      <div class="flip-card">
+                  
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              
+                              <img src="../Photos/foto3.jpeg" alt="Avatar" class="image">
+                              <h3 class="h3CardFront">Certification and Analysis</h3>
+                              
+                            </div>
+                            
+                            <div class="flip-card-back">
+                              
+                              <p class="pBack">Our internal control system, coupled with accredited lab analysis, ensures that our products meet stringent organic production requirements before they reach our clients.
+                                  We are very strict on proper internal inspections and compliance.
+                              </p>
+                              
+                            </div>
+                          </div>
+                          
                       </div>
-                      
-                    </div>
+                  </div>
         </div>
 
             
@@ -301,30 +336,12 @@
     </footer>
     <script src="../JS/main.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-  const panels = document.querySelectorAll('.panel');
+      
+  
 
-  // Function to remove active classes from all panels and their corresponding cont elements
-  function removeActiveClasses() {
-    panels.forEach(panel => {
-      panel.classList.remove('active');
-      panel.querySelector('.cont').classList.remove('dark-overlay');
-    });
-  }
 
-  panels.forEach(panel => {
-    panel.addEventListener('click', () => {
-      removeActiveClasses();
 
-      panel.classList.add('active');
-      panel.querySelector('.cont').classList.add('dark-overlay');
-    });
-  });
 
-  // Add dark-overlay class to the cont of initially active panel
-  const initiallyActivePanel = document.querySelector('.panel.active');
-  initiallyActivePanel.querySelector('.cont').classList.add('dark-overlay');
-});
     </script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">

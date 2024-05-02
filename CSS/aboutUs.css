@@ -84,7 +84,7 @@
     align-items: center;
     justify-content: space-evenly;
     align-items: stretch;
-    margin: 0 10%;
+    
     
   }
   
@@ -198,12 +198,10 @@
 }
 
 .howWeWork{
-  margin-left: 8%;
-  margin-right: 8%;
   text-align: center;
     
 }
-.howWeWork p{
+.howWeWork .p{
     text-align: center;
     
     margin: 0 auto;
@@ -217,108 +215,119 @@
   width: 100%;
 }
 
+/* For small tablets and long phones inn landscape mode */
 
-.panel {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
+/* For phones */
+@media only screen and (max-width: 767px) {
+  .card-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .container{
+    width: 80vw;
+    align-items: center;
+    
+  }
+  .contWhereWeOp{
+    align-items: center;
+    flex-direction: column;
+  }
+  .whereWeOperate{
+    width: 80vw;
+  }
+  .mapContainer{
+    align-items: center;
+    width: 80vw;
+    order: 1;
+    margin-right: 0;
+    margin: 20px;
+  }
+  .containerHowWeWork{
+    display: contents;
+  }
   
-  color: #fff;
+}
+
+
+
+/* PER FLIP CARD-ET*/
+  
+.flip-card {
+  margin: 50px auto;
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  perspective: 1000px; 
   cursor: pointer;
-  flex: 1;
-  margin: 10px;
+  border-radius: 15px;
+  
+}
+
+
+.flip-card-inner {
   position: relative;
-  transition: all 700ms ease-in;
-}
-
-/* .panel h4 {
-  font-size: 30px;
-  position: absolute;
-  bottom: 50%;
-  left: 10px;
-  padding-bottom: 30px;
-  margin: 0;
-  opacity: 0;
-} */
-.panel h4{
-  font-size: 20px;
-  padding-bottom: 2%;
-}
-.panel p {
-  font-size: 16px;
-  position: absolute;
-  bottom: 10%;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  
-  margin: 0;
-  opacity: 0;
-  width: calc(100% - 100px);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
 }
-@media (max-width:1000px) and (min-width:700px) {
-  .panel p {
-    font-size: 16px;
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
   position: absolute;
-  bottom: 10%;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
   
-  margin: 0;
-  opacity: 0;
-  width: calc(100% - 100px);
-  padding-bottom: calc(15px + (100vw - 700px) * (15 - 30) / (700 -  1000));
-  }
-}; 
-@media (max-width: 1000px) and (min-width: 700px) {
-  .panel.active .cont {
-    bottom: 0; /* Move the container back into view */
-  }
-
-  .panel.active .cont.dark-overlay {
-    height: 0; /* Reduce the height of the dark overlay */
-  }
-
-  .panel.active .cont p {
-    bottom: 100%; /* Move the paragraph offscreen */
-  }
-  .panel.active h4{
-    padding-bottom: calc(15px + (100vw - 700px) * (15 - 30) / (700 -  1000));
-  }
+  
 }
 
-.panel.active {
-  flex: 3;
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 15px;
+  
+}
+ .image{
+  border-radius: 15px;
+  width:100%;
+  height:100%;
 }
 
-.panel.active h4{
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-.panel.active p{
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s ;
-}
-.cont {
-  padding: 20px;
+
+.flip-card-back {
+  background-color: #369A7E;
   color: white;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+  display: flex;
+  
+  
 }
-
-.panel {
-  position: relative;
-}
-
-.panel .cont {
+.pBack{
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* border-radius: 0 0 50px 50px; */
-  transition: background-color 0.3s ease; 
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: medium;
 }
-
-.dark-overlay {
-  height: 15vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  
+.h3CardFront {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white; 
 }
-
-  
