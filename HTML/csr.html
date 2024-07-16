@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/csr.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/mainTemplate.css">
+    <title>Corporate Social Responsibility</title>
+</head>
+
+<body>
+    <!-- Kjo eshte per ate gjen jeshile qe kur navigon neper links te shfaqet ajo faqja nga posht lart jeshile(ngjyren e vendos vet) -->
+    <div class="loading-container">
+        <div class="loading-screen">
+        </div>
+    </div>
+
+    <div class="wrap">
+        <nav class="menu-container main-navigation">
+            <!-- burger menu -->
+            <input type="checkbox" aria-label="Toggle menu" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- logo -->
+            <a href="#" class="menu-logo">
+                <img src="../Photos/logo.png" alt="Logo" />
+
+            </a>
+
+            <!-- menu items -->
+            <div class="menu">
+                <h3>Go Organic, Improve Lives</h3>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="../HTML/products.html">Products</a></li>
+                    <li><a href="#home">News</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- Better to wrap barba container as close as possible -->
+        <div data-barba="wrapper">
+            <!-- Only this section changes on link navigation -->
+            <main data-barba="container" data-barba-namespace="home">
+                <!-- Ktu do vem te gjitha qe duam -->
+                <div class="heading-container">
+                    <h1 class="main-heading is-animated">This is<br><span class="green-heading-bg">the
+                            home</span><br>screen.<br></h1>
+                </div>
+            </main>
+        </div>
+
+
+    </div>
+
+
+</body>
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- Barba Core -->
+<script src="https://unpkg.com/@barba/core"></script>
+
+<!-- GSAP for animation -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+<!-- Some basic helper functions -->
+<script src="../JS/helper.js"></script>
+
+<!-- Main JS file -->
+<script src="../JS/mainTemplate.js"></script>
+
+</html>

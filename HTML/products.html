@@ -9,12 +9,18 @@
   <title>Products</title>
   <link rel="stylesheet" href="../CSS/products.css">
   <link rel="stylesheet" href="../CSS/footer.css">
+  <link rel="stylesheet" href="../CSS/mainTemplate.css">
 </head>
 
 <body>
 
+  <div class="loading-container">
+    <div class="loading-screen">
+    </div>
+  </div>
+
   <div class="wrap">
-    <nav class="menu-container">
+    <nav class="menu-container main-navigation">
       <!-- burger menu -->
       <input type="checkbox" aria-label="Toggle menu" />
       <span></span>
@@ -33,12 +39,22 @@
         <ul>
           <li><a href="main.html">Home</a></li>
           <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="../HTML/products.html">Products</a></li>
+          <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
           <li><a href="#home">News</a></li>
         </ul>
       </div>
 
     </nav>
+    <!-- Better to wrap barba container as close as possible -->
+    <div data-barba="wrapper">
+      <!-- Only this section changes on link navigation -->
+      <main data-barba="container" data-barba-namespace="home">
+        <!-- Ktu do vem te gjitha qe duam -->
+        <div class="heading-container is-animated">
+
+        </div>
+      </main>
+    </div>
 
     <header class="header">
 
@@ -1066,83 +1082,83 @@
 
   <script>
 
-document.addEventListener("DOMContentLoaded", function () {
-  var loadBtn = document.getElementById('load-more');
-  var tableRows = document.querySelectorAll('.responsive-table .table-row');
-  var totalItems = tableRows.length;
-  var initialLoadCount = 15; // Number of rows to show initially
-  var currentDisplayCount = initialLoadCount; // Track current displayed rows
+    document.addEventListener("DOMContentLoaded", function () {
+      var loadBtn = document.getElementById('load-more');
+      var tableRows = document.querySelectorAll('.responsive-table .table-row');
+      var totalItems = tableRows.length;
+      var initialLoadCount = 15; // Number of rows to show initially
+      var currentDisplayCount = initialLoadCount; // Track current displayed rows
 
-  // Initial setup: Show only the first initialLoadCount rows and display the Load More button
-  for (var i = 0; i < totalItems; i++) {
-    if (i < initialLoadCount) {
-      tableRows[i].style.display = 'flex';
-    } else {
-      tableRows[i].style.display = 'none'; // Hide rows beyond the initial count
-    }
-  }
+      // Initial setup: Show only the first initialLoadCount rows and display the Load More button
+      for (var i = 0; i < totalItems; i++) {
+        if (i < initialLoadCount) {
+          tableRows[i].style.display = 'flex';
+        } else {
+          tableRows[i].style.display = 'none'; // Hide rows beyond the initial count
+        }
+      }
 
-  loadBtn.addEventListener('click', function () {
-    if (loadBtn.textContent === 'Load More') {
-      // Show all rows
-      tableRows.forEach(function (row) {
-        row.style.display = 'flex';
+      loadBtn.addEventListener('click', function () {
+        if (loadBtn.textContent === 'Load More') {
+          // Show all rows
+          tableRows.forEach(function (row) {
+            row.style.display = 'flex';
+          });
+          loadBtn.textContent = 'Show Less';
+          scrollToTop();
+        } else {
+          // Reset to show only the initialLoadCount rows
+          for (var i = initialLoadCount; i < totalItems; i++) {
+            tableRows[i].style.display = 'none';
+          }
+          loadBtn.textContent = 'Load More';
+
+        }
       });
-      loadBtn.textContent = 'Show Less';
-      scrollToTop();
-    } else {
-      // Reset to show only the initialLoadCount rows
-      for (var i = initialLoadCount; i < totalItems; i++) {
-        tableRows[i].style.display = 'none';
-      }
-      loadBtn.textContent = 'Load More';
-      
-    }
-  });
 
-  document.getElementById("searchInput").addEventListener("keyup", function () {
-    var input = this.value.trim().toUpperCase();
+      document.getElementById("searchInput").addEventListener("keyup", function () {
+        var input = this.value.trim().toUpperCase();
 
-    // Toggle Load More button based on search input
-    if (input !== '') {
-      loadBtn.style.display = 'none'; // Hide Load More button during search
-    } else {
-      loadBtn.style.display = 'block'; // Show Load More button if search input is empty
-    }
+        // Toggle Load More button based on search input
+        if (input !== '') {
+          loadBtn.style.display = 'none'; // Hide Load More button during search
+        } else {
+          loadBtn.style.display = 'block'; // Show Load More button if search input is empty
+        }
 
-    // Filter rows based on search input
-    var rowsShown = 0;
-    tableRows.forEach(function (row, index) {
-      var name = row.querySelector('.col-1').textContent.toUpperCase();
-      var englishName = row.querySelector('.col-3').textContent.toUpperCase();
+        // Filter rows based on search input
+        var rowsShown = 0;
+        tableRows.forEach(function (row, index) {
+          var name = row.querySelector('.col-1').textContent.toUpperCase();
+          var englishName = row.querySelector('.col-3').textContent.toUpperCase();
 
-      if (name.indexOf(input) > -1 || englishName.indexOf(input) > -1) {
-        row.style.display = 'flex'; // Show row if it matches search criteria
-        rowsShown++;
-      } else {
-        row.style.display = 'none'; // Hide row if it doesn't match
-      }
+          if (name.indexOf(input) > -1 || englishName.indexOf(input) > -1) {
+            row.style.display = 'flex'; // Show row if it matches search criteria
+            rowsShown++;
+          } else {
+            row.style.display = 'none'; // Hide row if it doesn't match
+          }
+        });
+
+        // Manage Load More button text and behavior after search
+        if (input !== '') {
+          loadBtn.textContent = 'Load More'; // Reset button text if search input is not empty
+          currentDisplayCount = initialLoadCount; // Reset current display count
+        } else {
+          // Check if all matching rows are shown to toggle button text
+          if (rowsShown === totalItems) {
+            loadBtn.textContent = 'Show Less'; // All rows shown, switch to Show Less
+          } else {
+            loadBtn.textContent = 'Load More'; // Not all rows shown, switch to Load More
+          }
+        }
+
+        // Scroll to top after adjusting rows
+      });
+
     });
 
-    // Manage Load More button text and behavior after search
-    if (input !== '') {
-      loadBtn.textContent = 'Load More'; // Reset button text if search input is not empty
-      currentDisplayCount = initialLoadCount; // Reset current display count
-    } else {
-      // Check if all matching rows are shown to toggle button text
-      if (rowsShown === totalItems) {
-        loadBtn.textContent = 'Show Less'; // All rows shown, switch to Show Less
-      } else {
-        loadBtn.textContent = 'Load More'; // Not all rows shown, switch to Load More
-      }
-    }
-
-     // Scroll to top after adjusting rows
-  });
-
-});
-
-//per butonin load more
+    //per butonin load more
 
     document.addEventListener('DOMContentLoaded', function () {
       const loadBtn = document.getElementById('load-more');
@@ -1153,7 +1169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleRows(0, currentItem);
 
       loadBtn.addEventListener('click', function () {
-        
+
 
         // Show next set of rows or remaining rows if less than 15 are left
         toggleRows(currentItem, nextItem);
@@ -1188,11 +1204,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    
+
 
 
 
   </script>
 </body>
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- Barba Core -->
+<script src="https://unpkg.com/@barba/core"></script>
+
+<!-- GSAP for animation -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+<!-- Some basic helper functions -->
+<script src="../JS/helper.js"></script>
+
+<!-- Main JS file -->
+<script src="../JS/mainTemplate.js"></script>
 
 </html>

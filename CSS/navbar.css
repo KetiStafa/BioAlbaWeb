@@ -8,14 +8,22 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    background: #232323;
-    color: #e3d5d5;
+    color: #2e2e2e;
     padding: 20px;
     z-index: 1;
     height: 100px;
     user-select: none;
     box-sizing: border-box;
+    
   }
+  .menu ul li a{
+    color: #2e2e2e;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    
+  }
+  
 
   
   .menu-logo {
@@ -39,14 +47,16 @@ body {
     font-size: 25px;
     margin: 20px;
     margin-top: 25px;
+    white-space: nowrap; /* Prevent line break within links */
   }
   
   .menu-container a {
     font-size: 15px;
     text-decoration: none;
-    color: #232323;
+    color: #000;
     transition: color 0.3s ease;
     align-items: flex-end;
+    
   }
   
   .menu-container a:hover {
@@ -109,7 +119,7 @@ body {
   }
   
   .menu ul {
-    margin-left: 500px;
+    margin-left: 25vw;
     list-style: none;
     display:flex;
   }
@@ -199,3 +209,4 @@ body {
       padding: 0 20px;
     }
   }
+  

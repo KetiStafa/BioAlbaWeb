@@ -2,8 +2,11 @@
     margin: 0;
 }
 .hFillimi{
-    color: rgb(17,119,51);
+    color: rgb(47, 129, 74);
     margin-top: 15px;
+    font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 .trupi{
     
@@ -24,6 +27,7 @@
   .shkrimi .pUnder{
     text-align: center;
     padding-bottom: 40px;
+    
   }
 
 .p1,.p2, .p3, .p4, .p5, .p6, .p7 {
@@ -331,3 +335,20 @@
   margin: 0;
   color: white; 
 }
+.shkrimi .hFillimi .show {
+  background-size: 100% 40%;
+}
+.green-heading-bg{
+  display: inline;
+  z-index: -1;
+  background-image: linear-gradient(#4BEDC2, #4BEDC2);
+  background-position: 0 80%;
+  background-repeat: no-repeat;
+  background-size: 0 40%;
+  margin-left: -0.55rem;
+  margin-right: -0.55rem;
+  padding-left: 0.55rem;
+  padding-right: 0.55rem;
+  transition: background-size 1s 1s ease;
+}
+

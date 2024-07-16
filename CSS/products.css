@@ -42,7 +42,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 140vh;
   width: 100vw;
   object-fit: cover;
   z-index: -1;
@@ -286,9 +286,9 @@ h2 {
 }
 
 .search-container {
+  height: 15vh;
   padding: 40px 0;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 #searchInput {
