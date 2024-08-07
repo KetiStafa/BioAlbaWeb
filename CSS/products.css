@@ -22,7 +22,7 @@ body {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  perspective: 10px;
+  perspective: 20px;
   margin: 0;
 }
 
@@ -105,6 +105,61 @@ body {
   text-align: center;
   padding-top: 40px;
 
+}
+
+/* Media query for phones */
+@media only screen and (max-width: 767px) {
+  .header {
+    height: 30vh;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+  }
+
+  .background {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 30rem;
+    transform: translateZ(-10px) scale(1.5); /* Adjust parallax effect for mobile */
+  }
+
+  .title {
+    font-size: 1.2rem;
+    /* max-width: 50vw; */
+
+  }
+
+  .photo {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .photo img {
+    width: 70vw;
+    height: 20vh;
+    border-radius: 15px;
+    margin: 10px 0;
+    box-shadow: 5px 5px 5px rgb(27, 26, 26);
+  }
+  .responsive-table li{
+    flex-direction: column;
+  }
+  #load-more{
+    max-width: 30% !important;
+  }
 }
 
 /*----------------*/
@@ -309,57 +364,6 @@ h2 {
   background-color: white;
 }
 
-/* Media query for phones */
-@media only screen and (max-width: 767px) {
-  .header {
-    height: 50vh;
-    width: 100vw;
-    margin: 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-style: preserve-3d;
-    z-index: -1;
-  }
-
-  .background {
-
-    height: 120vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-bottom: 50rem;
-    /* Adjust this for the background image*/
-
-  }
-
-  .title {
-    font-size: 1.2rem;
-    /* max-width: 50vw; */
-
-  }
-
-  .photo {
-    padding-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 100%;
-  }
-
-  .photo img {
-    width: 70vw;
-    height: 20vh;
-    border-radius: 15px;
-    margin: 10px 0;
-    box-shadow: 5px 5px 5px rgb(27, 26, 26);
-  }
-}
-
 /* Per load more button te lista e produkteve */
 
 #load-more {
@@ -400,11 +404,11 @@ h2 {
 .responsive-table .table-row:nth-child(7),
 .responsive-table .table-row:nth-child(8),
 .responsive-table .table-row:nth-child(9),
-.responsive-table .table-row:nth-child(10)
-.responsive-table .table-row:nth-child(11)
-.responsive-table .table-row:nth-child(12)
-.responsive-table .table-row:nth-child(13)
-.responsive-table .table-row:nth-child(14)
+.responsive-table .table-row:nth-child(10),
+.responsive-table .table-row:nth-child(11),
+.responsive-table .table-row:nth-child(12),
+.responsive-table .table-row:nth-child(13),
+.responsive-table .table-row:nth-child(14),
 .responsive-table .table-row:nth-child(15){
   
   display:flex;

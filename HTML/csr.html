@@ -6,75 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/csr.css">
     <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/mainTemplate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Corporate Social Responsibility</title>
 </head>
 
 <body>
-    <!-- Kjo eshte per ate gjen jeshile qe kur navigon neper links te shfaqet ajo faqja nga posht lart jeshile(ngjyren e vendos vet) -->
-    <div class="loading-container">
-        <div class="loading-screen">
-        </div>
+
+
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'><a href='#'><img src="../Photos/logo.png" /></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="../HTML/main.html">Home</a></li>
+                    <li><a href="../HTML/aboutUs.html">About Us</a></li>
+                    <li><a href="../HTML/products.html">Products</a></li>
+                    <li><a href="#">News</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        <br>
+        <br>
+        <br>
+    </header>
+
+    <div class="heading-container">
+        <h1 class="is-animated h1">Empowering Communities and Nurturing Sustainability</h1>
+
     </div>
 
-    <div class="wrap">
-        <nav class="menu-container main-navigation">
-            <!-- burger menu -->
-            <input type="checkbox" aria-label="Toggle menu" />
-            <span></span>
-            <span></span>
-            <span></span>
 
-            <!-- logo -->
-            <a href="#" class="menu-logo">
-                <img src="../Photos/logo.png" alt="Logo" />
 
-            </a>
+    <p class="p1 is-animated">At BioAlba, we are more than just an organic medicinal plants producer;
+        we are committed to making a positive impact on communities and the environment.
+        Our environmentally friendly approach is socially
+        focused in that we support local farmers and community organizations. </p>
 
-            <!-- menu items -->
-            <div class="menu">
-                <h3>Go Organic, Improve Lives</h3>
-                <ul>
-                    <li><a href="main.html">Home</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="../HTML/products.html">Products</a></li>
-                    <li><a href="#home">News</a></li>
+
+
+
+    <div class="scallop-up"></div>
+    <div class="focus">
+
+        <h2 class="focusH2">Our focus is placed upon:</h2>
+
+    </div>
+
+
+    <section class="our-work section">
+        <div class="container sticky">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4">
+                </div>
+                <div class="col-12 col-md-8 slider">
+                    <div class="carousel__slider">
+                        <div class="carousel__item" id="our-work-1">
+                            <h2 class="blurred-box__title wow animated" style="visibility: visible;">Supporting
+                                Small Farmers</h2>
+                            <div class="blurred-box__footer">
+                                <span class="blurred-box__footer-line wow animated" style="visibility: visible;"></span>
+                                <p class="blurred-box__text wow animated" style="visibility: visible;">We empower
+                                    small and medium farmers in remote areas,
+                                    encouraging them to work together while providing them with access to
+                                    international markets.</p>
+                            </div>
+                        </div>
+                        <div class="carousel__item" id="our-work-2">
+                            <h2 class="blurred-box__title">Training and Education</h2>
+                            <div class="blurred-box__footer">
+                                <span class="blurred-box__footer-line"></span>
+                                <p class="blurred-box__text">We provide training and support for inputs,
+                                    including seeds and plant protection products, allowed in organic cultivation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel__item" id="our-work-3">
+                            <h2 class="blurred-box__title">Social Impact</h2>
+                            <div class="blurred-box__footer">
+                                <span class="blurred-box__footer-line"></span>
+                                <p class="blurred-box__text">3% of our income is dedicated to supporting local
+                                    organizations,
+                                    youth empowerment, and women at risk.</p>
+                            </div>
+                        </div>
+                        <div class="carousel__item" id="our-work-4">
+                            <h2 class="blurred-box__title">Community Engagement</h2>
+                            <div class="blurred-box__footer">
+                                <span class="blurred-box__footer-line"></span>
+                                <p class="blurred-box__text">We engage with local farming communities to educate
+                                    them about market trends,
+                                    organic standards, environmental protection, and sustainability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <ul class="carousel__nav">
+                    <li class="carousel__nav__item" data-target="our-work-1"></li>
+                    <li class="carousel__nav__item" data-target="our-work-2"></li>
+                    <li class="carousel__nav__item" data-target="our-work-3"></li>
+                    <li class="carousel__nav__item" data-target="our-work-4"></li>
                 </ul>
             </div>
-
-        </nav>
-        <!-- Better to wrap barba container as close as possible -->
-        <div data-barba="wrapper">
-            <!-- Only this section changes on link navigation -->
-            <main data-barba="container" data-barba-namespace="home">
-                <!-- Ktu do vem te gjitha qe duam -->
-                <div class="heading-container">
-                    <h1 class="main-heading is-animated">This is<br><span class="green-heading-bg">the
-                            home</span><br>screen.<br></h1>
-                </div>
-            </main>
         </div>
-
-
-    </div>
-
+    </section>
 
 </body>
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<!-- Barba Core -->
-<script src="https://unpkg.com/@barba/core"></script>
-
-<!-- GSAP for animation -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-<!-- Some basic helper functions -->
-<script src="../JS/helper.js"></script>
-
-<!-- Main JS file -->
-<script src="../JS/mainTemplate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+<script src="../JS/verticalCarousel.js"></script>
+<script src="../JS/navbar.js"></script>
 
 </html>

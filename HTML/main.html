@@ -4,59 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../CSS/footer.css">
-  <link rel="stylesheet" href="../CSS/main.css">
-  <title>Bioalba</title>
+  <script src="https://kit.fontawesome.com/f40774f3ad.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../CSS/navbar.css">
-  <link rel="stylesheet" href="../CSS/main.csss">
-  <!-- <link rel="stylesheet" href="../CSS/transition.css"> -->
-  <link rel="stylesheet" href="../CSS/mainTemplate.css">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/footer.css">
+  <title>Bioalba</title>
+  
+
 </head>
 
 <body>
-  
-  <div class="loading-container">
-    <div class="loading-screen">
-    </div>
-  </div>
-
-  <div class="wrap">
-  <nav class="menu-container main-navigation">
-    <!-- burger menu -->
-    <input type="checkbox" aria-label="Toggle menu" />
-    <span></span>
-    <span></span>
-    <span></span>
-
-    <!-- logo -->
-    <a href="#" class="menu-logo">
-        <img src="../Photos/logo.png" alt="Logo" />
-
-    </a>
-
-    <!-- menu items -->
-    <div class="menu">
-        <h3>Go Organic, Improve Lives</h3>
-        <ul>
-            
-            <li><a href="../HTML/aboutUs.html">About Us</a></li>
+    <header>
+      <nav>
+        <ul class='nav-bar'>
+          <li class='logo'><a href='#'><img src="../Photos/logo.png" /></a></li>
+          <input type='checkbox' id='check' />
+          <span class="menu">
             <li><a href="../HTML/products.html">Products</a></li>
+            <li><a href="../HTML/aboutUs.html">About Us</a></li>
             <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
-            <li><a href="#home">News</a></li>
+            <li><a href="#">News</a></li>
+            <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+          </span>
+          <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
         </ul>
-    </div>
+      </nav>
+    </header>
 
-</nav>
 
-<!-- Better to wrap barba container as close as possible -->
-<div data-barba="wrapper">
-  <!-- Only this section changes on link navigation -->
-  <main data-barba="container" data-barba-namespace="home">
-    <div class="heading-container is-animated">
-            
-    </div>
-  </main>
-</div>
   <div class="body-container">
 
     <div class="katrori">
@@ -68,17 +43,11 @@
           we are committed to promoting organic excellence while contributing to a sustainable
           and socially responsible future of people’s lives. We are the only organic medicinal & aromatic plants
           producer based in Albania focused 100% on organic production.
-          We offer a diverse portfolio of over 100 products acquired from cultivation and wild collection practices.</p>
+          We offer a diverse portfolio of over 100 products acquired from cultivation and wild collection practices.
+        </p>
       </div>
-
-
     </div>
-
-
-
-
   </div>
-</div>
 
   <footer class="footer-distributed">
 
@@ -122,21 +91,6 @@
     </div>
     <p class="footer-company-name">Copyright © 2024 | BioAlba Group Sh.P.K. | All Rights Reserved</p>
   </footer>
+  <script src="../JS/navbar.js"></script>
 </body>
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<!-- Barba Core -->
-<script src="https://unpkg.com/@barba/core"></script>
-
-<!-- GSAP for animation -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-<!-- Some basic helper functions -->
-<script src="../JS/helper.js"></script>
-
-<!-- Main JS file -->
-<script src="../JS/mainTemplate.js"></script>
-
 </html>

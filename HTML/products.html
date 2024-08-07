@@ -5,63 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/f40774f3ad.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../CSS/navbar.css">
   <title>Products</title>
+  <link rel="stylesheet" href="../CSS/navbar.css">
   <link rel="stylesheet" href="../CSS/products.css">
   <link rel="stylesheet" href="../CSS/footer.css">
-  <link rel="stylesheet" href="../CSS/mainTemplate.css">
 </head>
 
 <body>
 
-  <div class="loading-container">
-    <div class="loading-screen">
-    </div>
-  </div>
+  <header>
+    <nav>
+      <ul class='nav-bar'>
+        <li class='logo'><a href='#'><img src="../Photos/logo.png" /></a></li>
+        <input type='checkbox' id='check' />
+        <span class="menu" style="padding-right: 15px;">
+          <li><a href="../HTML/main.html">Home</a></li>
+          <li><a href="../HTML/aboutUs.html">About Us</a></li>
+          <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
+          <li><a href="#">News</a></li>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+  </header>
+
+
 
   <div class="wrap">
-    <nav class="menu-container main-navigation">
-      <!-- burger menu -->
-      <input type="checkbox" aria-label="Toggle menu" />
-      <span></span>
-      <span></span>
-      <span></span>
-
-      <!-- logo -->
-      <a href="#" class="menu-logo">
-        <img src="../Photos/logo.png" alt="Logo" />
-
-      </a>
-
-      <!-- menu items -->
-      <div class="menu">
-        <h3>Go Organic, Improve Lives</h3>
-        <ul>
-          <li><a href="main.html">Home</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
-          <li><a href="#home">News</a></li>
-        </ul>
-      </div>
-
-    </nav>
-    <!-- Better to wrap barba container as close as possible -->
-    <div data-barba="wrapper">
-      <!-- Only this section changes on link navigation -->
-      <main data-barba="container" data-barba-namespace="home">
-        <!-- Ktu do vem te gjitha qe duam -->
-        <div class="heading-container is-animated">
-
-        </div>
-      </main>
-    </div>
-
-    <header class="header">
+    
+    <div class="header">
 
       <img src="../Photos/Field.jpeg" alt="Field image" class="background">
 
       <h1 class="title">Rooted in Albania, Serving Europe</h1>
-    </header>
+    </div>
 
 
     <!-- Trupi posht -->
@@ -86,6 +64,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="scallop-down"></div>
 
     <div class="bgList">
@@ -1078,7 +1058,7 @@
       </p>
     </footer>
   </div>
-
+  <script src="../JS/navbar.js"></script>
 
   <script>
 
@@ -1098,6 +1078,8 @@
         }
       }
 
+      const searchInputDiv = document.getElementById('searchInput');
+      
       loadBtn.addEventListener('click', function () {
         if (loadBtn.textContent === 'Load More') {
           // Show all rows
@@ -1105,14 +1087,14 @@
             row.style.display = 'flex';
           });
           loadBtn.textContent = 'Show Less';
-          scrollToTop();
+          
         } else {
           // Reset to show only the initialLoadCount rows
           for (var i = initialLoadCount; i < totalItems; i++) {
             tableRows[i].style.display = 'none';
           }
           loadBtn.textContent = 'Load More';
-
+          searchInputDiv.scrollIntoView({ behavior: 'smooth' });
         }
       });
 
@@ -1203,27 +1185,14 @@
         document.querySelector('.background').classList.remove('scroll');
       }
     });
+    
 
 
 
 
 
   </script>
+
 </body>
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<!-- Barba Core -->
-<script src="https://unpkg.com/@barba/core"></script>
-
-<!-- GSAP for animation -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-<!-- Some basic helper functions -->
-<script src="../JS/helper.js"></script>
-
-<!-- Main JS file -->
-<script src="../JS/mainTemplate.js"></script>
 
 </html>

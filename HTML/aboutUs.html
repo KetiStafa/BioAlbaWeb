@@ -16,121 +16,110 @@
 </head>
 
 <body>
-  <div class="loading-container">
-    <div class="loading-screen">
+
+
+
+  <header>
+    <nav>
+      <ul class='nav-bar'>
+        <li class='logo'><a href='#'><img src="../Photos/logo.png" /></a></li>
+        <input type='checkbox' id='check' />
+        <span class="menu">
+          <li><a href="../HTML/main.html">Home</a></li>
+          <li><a href="../HTML/products.html">Products</a></li>
+          <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
+          <li><a href="#">News</a></li>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="heading-container is-animated shkrimi">
+
+    <h1 class="hFillimi">Welcome to <span class="green-heading-bg">Bioalba Group</span></h1>
+
+    <p class="pUnder">Cultivating Organic Excellence for a Sustainable Future</p>
+
+    <div class="shkrimi main-heading">
+
+      <!-- Fermer -->
+      <div class="icon-container">
+        <img src="../Photos/farmer64.png" alt="farmer" class="icon">
+        <p class="p1">Bioalba Group is a community of dedicated small and medium sized farmers working relentlessly
+          to
+          produce and cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on
+          producing quality more than quantity, we are committed to promoting organic excellence while contributing
+          to a
+          sustainable and socially responsible future.</p>
+      </div>
+
+
+      <!--Organic  -->
+      <div class="icon-container">
+        <img src="../Photos/organic64.png" alt="organic logo" class="icon">
+        <p class="p2">We are an environmentally friendly company exporting predominantly to the European market,
+          and the only company in Albania focused 100% on organic production. </p>
+      </div>
+
+
+
+      <!--Njerez  -->
+      <div class="icon-container">
+        <img src="../Photos/people64.png" alt="people" class="icon">
+        <p class="p3">Bioalba is more than just an organic medicinal plants producer and exporter
+          – Our environmentally friendly approach is socially focused in that we support local organizations,
+          local farmers and their families. </p>
+      </div>
+
+
+
+      <!-- ...  -->
+      <div class="icon-container">
+        <img src="../Photos/value64.png" alt="values icon" class="icon">
+        <p class="p4">We represent a group of organic farmers and pickers
+          who share similar values to ours and similar objectives in securing
+          a wide variety of organic products,
+          which are highly valued by our international partners.</p>
+      </div>
+
+
+
+      <!--Parcel  -->
+      <div class="icon-container">
+        <img src="../Photos/wheat64.png" alt="yield" class="icon">
+
+        <p class="p5">To maximize yield and efficiency, we gather small farmers into groups,
+          allowing them to pool their resources and cultivate larger parcels collectively.
+          This approach helps small farmers increase their income and contribute to the organic market.</p>
+      </div>
+
+
+
+      <!--Kuti  -->
+      <div class="icon-container">
+        <img src="../Photos/box64.png" alt="package" class="icon">
+        <p class="p6">With a diverse portofolio of over 100 products coming from cultivation and wild collection
+          practice. </p>
+      </div>
+
+
+      <!--Tick  -->
+      <div class="icon-container">
+        <img src="../Photos/tick64.png" id="checkmark" class="icon">
+
+        <p class="p7">Our focus is on bringing wild collection plants into the
+          cultivation practices in order to ensure quality,
+          quantity and continuity (sustainability).
+        </p>
+      </div>
     </div>
   </div>
 
-  <div class="wrap">
-    <nav class="menu-container main-navigation">
-        <!-- burger menu -->
-        <input type="checkbox" aria-label="Toggle menu" />
-        <span></span>
-        <span></span>
-        <span></span>
-
-        <!-- logo -->
-        <a href="#" class="menu-logo">
-            <img src="../Photos/logo.png" alt="Logo" />
-
-        </a>
-
-        <!-- menu items -->
-        <div class="menu">
-            <h3>Go Organic, Improve Lives</h3>
-            <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="../HTML/products.html">Products</a></li>
-                <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
-                <li><a href="#home">News</a></li>
-            </ul>
-        </div>
-
-    </nav>
-    <!-- Better to wrap barba container as close as possible -->
-    <div data-barba="wrapper">
-      <!-- Only this section changes on link navigation -->
-      <main data-barba="container" data-barba-namespace="home">
-          <!-- Ktu do vem te gjitha qe duam -->
-          <div class="heading-container is-animated shkrimi">
-            <h1 class="hFillimi">Welcome to <span class="green-heading-bg">Bioalba Group</span></h1>
-            <p class="pUnder">Cultivating Organic Excellence for a Sustainable Future</p>
-            <div class="shkrimi main-heading">
-              <!--Fermer -->
-              <div class="icon-container">
-                <img src="../Photos/farmer64.png" alt="farmer" class="icon">
-                <p class="p1">Bioalba Group is a community of dedicated small and medium sized farmers working relentlessly to
-                  produce and cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on
-                  producing quality more than quantity, we are committed to promoting organic excellence while contributing to a
-                  sustainable and socially responsible future.</p>
-              </div>
-        
-        
-              <!--Organic  -->
-              <div class="icon-container">
-                <img src="../Photos/organic64.png" alt="organic logo" class="icon">
-                <p class="p2">We are an environmentally friendly company exporting predominantly to the European market,
-                  and the only company in Albania focused 100% on organic production. </p>
-              </div>
-        
-        
-        
-              <!--Njerez  -->
-              <div class="icon-container">
-                <img src="../Photos/people64.png" alt="people" class="icon">
-                <p class="p3">Bioalba is more than just an organic medicinal plants producer and exporter
-                  – Our environmentally friendly approach is socially focused in that we support local organizations,
-                  local farmers and their families. </p>
-              </div>
-        
-        
-        
-              <!-- ...  -->
-              <div class="icon-container">
-                <img src="../Photos/value64.png" alt="values icon" class="icon">
-                <p class="p4">We represent a group of organic farmers and pickers
-                  who share similar values to ours and similar objectives in securing
-                  a wide variety of organic products,
-                  which are highly valued by our international partners.</p>
-              </div>
-        
-        
-        
-              <!--Parcel  -->
-              <div class="icon-container">
-                <img src="../Photos/wheat64.png" alt="yield" class="icon">
-        
-                <p class="p5">To maximize yield and efficiency, we gather small farmers into groups,
-                  allowing them to pool their resources and cultivate larger parcels collectively.
-                  This approach helps small farmers increase their income and contribute to the organic market.</p>
-              </div>
-        
-        
-        
-              <!--Kuti  -->
-              <div class="icon-container">
-                <img src="../Photos/box64.png" alt="package" class="icon">
-                <p class="p6">With a diverse portofolio of over 100 products coming from cultivation and wild collection
-                  practice. </p>
-              </div>
-        
-        
-              <!--Tick  -->
-              <div class="icon-container">
-                <img src="../Photos/tick64.png" id="checkmark" class="icon">
-        
-                <p class="p7">Our focus is on bringing wild collection plants into the
-                  cultivation practices in order to ensure quality,
-                  quantity and continuity (sustainability).
-                </p>
-              </div>
-            </div>
-          </div>
-      </main>
-  </div>
-
   <div class="trupi">
-    
+
 
     <!-------------------------------- Our Journey ------------------------------------>
 
@@ -158,9 +147,11 @@
           </div>
           <div class="content">
             <div class="title">A Community of Organic Farmers</div>
-            <div class="description">We represent a diverse group of organic farmers who share our values and objectives
+            <div class="description">We represent a diverse group of organic farmers who share our values and
+              objectives
               and are leaded by passion for cultivation.
-              Together, we work towards securing and producing products that are in high demand in today's market.</div>
+              Together, we work towards securing and producing products that are in high demand in today's market.
+            </div>
           </div>
         </div>
 
@@ -172,7 +163,8 @@
           </div>
           <div class="content">
             <div class="title">From Wild Collection to Cultivation</div>
-            <div class="description">Our produce stems from both careful cultivation practices and the wild collection
+            <div class="description">Our produce stems from both careful cultivation practices and the wild
+              collection
               of precious botanicals. Our organic farmers are also our wild collection pickers.</div>
           </div>
         </div>
@@ -186,7 +178,8 @@
           <div class="content">
             <div class="title">Remote areas development</div>
             <div class="description">Our small farmers and wild collection operators are direct beneficiaries of our
-              production system and trading activities. Purchasing our products means having a direct contribution to
+              production system and trading activities. Purchasing our products means having a direct contribution
+              to
               our social program linked with families and farms in remote areas. Our work is a financial help for
               vulnerable families especially women in areas we operate. </div>
           </div>
@@ -200,7 +193,8 @@
           </div>
           <div class="content">
             <div class="title">A Trustworthy Management Team</div>
-            <div class="description">With a reputable and experienced management team, we bring trustworthy credentials
+            <div class="description">With a reputable and experienced management team, we bring trustworthy
+              credentials
               in the organic sector at both national and international levels.</div>
           </div>
         </div>
@@ -213,8 +207,10 @@
           </div>
           <div class="content">
             <div class="title">Traceability and Quality Control</div>
-            <div class="description">We are meticulous about traceability and act as guardians of our product from the
-              field to the client. Implementation of Internal Control System makes possible the control and traceability
+            <div class="description">We are meticulous about traceability and act as guardians of our product from
+              the
+              field to the client. Implementation of Internal Control System makes possible the control and
+              traceability
               of products in every link of the movement from cultivation to export.</div>
           </div>
         </div>
@@ -228,8 +224,10 @@
       <h2>Other Services</h2>
       <p>
         Besides the production and sale of organic products (cultivation and wild harvesting),
-        Bioalba offers consulting services to guide and assist farmers and clients in implementing organic regulations.
-        Our renowned experts help farmers create and implement management systems that meet the required standards in
+        Bioalba offers consulting services to guide and assist farmers and clients in implementing organic
+        regulations.
+        Our renowned experts help farmers create and implement management systems that meet the required standards
+        in
         the market.
       </p>
     </div>
@@ -258,7 +256,8 @@
       <h2>How we work</h2>
       <p class="p">We have a reputable group of professionals with trustworthy credentials in the organic
         sector at the national and international levels.
-        By paying attention to traceability, we act as a guardian of the product line from the field to the client. </p>
+        By paying attention to traceability, we act as a guardian of the product line from the field to the client.
+      </p>
 
       <div class="containerHowWeWork">
         <div class="flip-card">
@@ -361,7 +360,8 @@
       <p class="footer-company-about">
         <span>About the company</span>
         Bioalba Group is a community of dedicated small and medium sized farmers working relentlessly to produce and
-        cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on producing quality
+        cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on producing
+        quality
         more than quantity, we are committed to promoting organic excellence while contributing to a sustainable and
         socially responsible future.
       </p>
@@ -372,37 +372,16 @@
       </div>
 
     </div>
-    <p class="footer-company-name">Copyright © <span id="year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved</p>
+    <p class="footer-company-name">Copyright © <span id="year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved
+    </p>
   </footer>
   <script src="../JS/main.js"></script>
-  <script>
-
-
-
-
-
-
-  </script>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">
     </script>
-
+  <script src="../JS/navbar.js"></script>
 
 </body>
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<!-- Barba Core -->
-<script src="https://unpkg.com/@barba/core"></script>
-
-<!-- GSAP for animation -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-<!-- Some basic helper functions -->
-<script src="../JS/helper.js"></script>
-
-<!-- Main JS file -->
-<script src="../JS/mainTemplate.js"></script>
 
 </html>
