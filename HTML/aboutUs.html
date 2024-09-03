@@ -9,9 +9,7 @@
   <link rel="stylesheet" href="../CSS/footer.css">
   <link rel="stylesheet" href="../CSS/aboutUs.css">
   <link rel="stylesheet" href="../CSS/navbar.css">
-  <!-- <link rel="stylesheet" href="../CSS/transition.css"> -->
-  <link rel="stylesheet" href="../CSS/mainTemplate.css">
-
+  <link rel="stylesheet" href="../CSS/animation.css">
   <title>About Us</title>
 </head>
 
@@ -29,6 +27,7 @@
           <li><a href="../HTML/products.html">Products</a></li>
           <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
           <li><a href="#">News</a></li>
+          <li><a href="../HTML/contactUs.html">Contact Us</a></li>
           <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
         </span>
         <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
@@ -36,17 +35,20 @@
     </nav>
   </header>
 
-
-  <div class="heading-container is-animated shkrimi">
-
+  <div class="aboutHeading">
     <h1 class="hFillimi">Welcome to <span class="green-heading-bg">Bioalba Group</span></h1>
 
     <p class="pUnder">Cultivating Organic Excellence for a Sustainable Future</p>
+    <div class="separator"><img src="../Photos/layeredWavesWhite.png" alt=""></div>
+  </div>
+  
+
+  <div class="heading-container is-animated shkrimi">
 
     <div class="shkrimi main-heading">
 
       <!-- Fermer -->
-      <div class="icon-container">
+      <div class="icon-container slide">
         <img src="../Photos/farmer64.png" alt="farmer" class="icon">
         <p class="p1">Bioalba Group is a community of dedicated small and medium sized farmers working relentlessly
           to
@@ -58,7 +60,7 @@
 
 
       <!--Organic  -->
-      <div class="icon-container">
+      <div class="icon-container slide">
         <img src="../Photos/organic64.png" alt="organic logo" class="icon">
         <p class="p2">We are an environmentally friendly company exporting predominantly to the European market,
           and the only company in Albania focused 100% on organic production. </p>
@@ -67,7 +69,7 @@
 
 
       <!--Njerez  -->
-      <div class="icon-container">
+      <div class="icon-container slide">
         <img src="../Photos/people64.png" alt="people" class="icon">
         <p class="p3">Bioalba is more than just an organic medicinal plants producer and exporter
           – Our environmentally friendly approach is socially focused in that we support local organizations,
@@ -77,7 +79,7 @@
 
 
       <!-- ...  -->
-      <div class="icon-container">
+      <div class="icon-container slide">
         <img src="../Photos/value64.png" alt="values icon" class="icon">
         <p class="p4">We represent a group of organic farmers and pickers
           who share similar values to ours and similar objectives in securing
@@ -88,7 +90,7 @@
 
 
       <!--Parcel  -->
-      <div class="icon-container">
+      <div class="icon-container slide">
         <img src="../Photos/wheat64.png" alt="yield" class="icon">
 
         <p class="p5">To maximize yield and efficiency, we gather small farmers into groups,
@@ -99,7 +101,7 @@
 
 
       <!--Kuti  -->
-      <div class="icon-container">
+      <div class="icon-container slide">
         <img src="../Photos/box64.png" alt="package" class="icon">
         <p class="p6">With a diverse portofolio of over 100 products coming from cultivation and wild collection
           practice. </p>
@@ -107,7 +109,7 @@
 
 
       <!--Tick  -->
-      <div class="icon-container">
+      <div class="icon-container slide">
         <img src="../Photos/tick64.png" id="checkmark" class="icon">
 
         <p class="p7">Our focus is on bringing wild collection plants into the
@@ -139,7 +141,7 @@
       <br>
 
       <div class="card-container">
-        <div class="container">
+        <div class="container slideM">
           <div class="icon">
 
             <img src="../Photos/farmer64.png" alt="farmer">
@@ -155,7 +157,7 @@
           </div>
         </div>
 
-        <div class="container">
+        <div class="container slideD">
           <div class="icon">
 
             <img src="../Photos/plant64.png" alt="Plant">
@@ -169,7 +171,7 @@
           </div>
         </div>
 
-        <div class="container">
+        <div class="container slideM">
           <div class="icon">
 
             <img src="../Photos/handshake64.png" alt="Help">
@@ -185,7 +187,7 @@
           </div>
         </div>
 
-        <div class="container">
+        <div class="container slideD">
           <div class="icon">
 
             <img src="../Photos/shield64.png" alt="Trustworthy">
@@ -199,7 +201,7 @@
           </div>
         </div>
 
-        <div class="container">
+        <div class="container slideD1">
           <div class="icon">
 
             <img src="../Photos/settings64.png" alt="Quality">
@@ -222,7 +224,7 @@
     </div>
     <div class="otherServices">
       <h2>Other Services</h2>
-      <p>
+      <p class="pOther">
         Besides the production and sale of organic products (cultivation and wild harvesting),
         Bioalba offers consulting services to guide and assist farmers and clients in implementing organic
         regulations.
@@ -260,7 +262,7 @@
       </p>
 
       <div class="containerHowWeWork">
-        <div class="flip-card">
+        <div class="flip-card flip-card1">
 
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -279,7 +281,7 @@
           </div>
 
         </div>
-        <div class="flip-card">
+        <div class="flip-card flip-card2">
 
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -299,7 +301,7 @@
           </div>
 
         </div>
-        <div class="flip-card">
+        <div class="flip-card flip-card3">
 
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -375,6 +377,7 @@
     <p class="footer-company-name">Copyright © <span id="year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved
     </p>
   </footer>
+  
   <script src="../JS/main.js"></script>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">
