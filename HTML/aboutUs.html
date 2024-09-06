@@ -157,7 +157,7 @@
           </div>
         </div>
 
-        <div class="container slideD">
+        <div class="container">
           <div class="icon">
 
             <img src="../Photos/plant64.png" alt="Plant">
@@ -171,7 +171,7 @@
           </div>
         </div>
 
-        <div class="container slideM">
+        <div class="container">
           <div class="icon">
 
             <img src="../Photos/handshake64.png" alt="Help">
@@ -187,7 +187,7 @@
           </div>
         </div>
 
-        <div class="container slideD">
+        <div class="container">
           <div class="icon">
 
             <img src="../Photos/shield64.png" alt="Trustworthy">
@@ -201,7 +201,7 @@
           </div>
         </div>
 
-        <div class="container slideD1">
+        <div class="container">
           <div class="icon">
 
             <img src="../Photos/settings64.png" alt="Quality">
@@ -383,6 +383,41 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">
     </script>
   <script src="../JS/navbar.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Function to check if an element is partially in the viewport (e.g., 40% visible)
+    function isElementPartiallyInViewport(el, visibilityRatio = 0.4) {
+        var rect = el.getBoundingClientRect();
+        var elementHeight = rect.height;
+        var windowHeight = window.innerHeight;
+        
+        // Calculate how much of the element is visible
+        var visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+        var visibleRatio = visibleHeight / elementHeight;
+        
+        return visibleRatio >= visibilityRatio; // Return true if the visible part is greater or equal to the ratio
+    }
+
+    // Function to handle the scroll event
+    function handleScroll() {
+        var elements = document.querySelectorAll('.container'); // Select all the containers that need to animate
+        elements.forEach(function (el, index) {
+            if (isElementPartiallyInViewport(el, 0.4)) { // Trigger when 40% of the element is visible
+                el.style.transitionDelay = `${index * 0.1}s`; // Add staggered delay for each element
+                el.classList.add('visible'); // Add the visible class to trigger animation
+            } else {
+                el.classList.remove('visible'); // Remove the visible class to reverse animation
+            }
+        });
+    }
+
+    // Initial check in case elements are already in view
+    handleScroll();
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll);
+});
+  </script>
 
 </body>
 

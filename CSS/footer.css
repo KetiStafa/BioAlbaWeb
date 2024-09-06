@@ -23,6 +23,9 @@ section {
   text-align: left;
   font: bold 12px sans-serif;
   padding: 40px 30px;
+  bottom: 0;
+  z-index: 200;
+  position: relative;
 }
 
 .footer-distributed .footer-left,

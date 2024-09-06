@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     overflow-x: hidden;
@@ -443,7 +445,7 @@ span{
     font-weight: 500;
     animation: appearM linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 20%;
   }
   
   .image-content {

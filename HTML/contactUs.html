@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="../CSS/contactUs.css">
     <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -29,7 +32,101 @@
             </ul>
         </nav>
     </header>
-    
+
+
+    <div class="mainHeading section section1">
+        <div class="overlay"></div>
+        <h1>Contact Us</h1>
+        <div id="section04" class="demo">
+            <a href="#contactForm1"><span></span></a>
+        </div>
+    </div>
+
+
+
+
+    <div class="lastDiv">
+        <div class="block block3">
+            <h2>Stay Connected</h2>
+            <p>Connect with us on social media for the latest updates, insights, and stories from our organic journey:
+            </p>
+            <ul>
+                <li><a href="https://www.facebook.com/www.bioalba.al/"><i class="fa-brands fa-facebook-f"
+                            style="color: #1877f2;"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/bioalba-group"><i class="fa-brands fa-linkedin-in"
+                            style="color: #0762c8;"></i></a></li>
+
+            </ul>
+        </div>
+
+        <div class="block block2">
+            <p>BioAlba Group Headquarters</p>
+            <p>Rr. Leke Dukagjini, 200/72, Kamez, Tirana, Albania.</p>
+            <p>Tel: +355(0)682062262</p>
+            <p>Email: <a href="mailto:info@bioalba.al">info@bioalba.al</a></p>
+            <p>Web: <a href="http://www.bioalba.al" target="_blank">www.bioalba.al</a></p>
+        </div>
+
+        <div class="block block1">
+            <div id="map2"></div>
+        </div>
+
+    </div>
+
+    <div class="contactForm" id="contactForm1">
+        <hr class="hr">
+        <h2 class="contactH2">Do not hesitate to contact us!</h2>
+
+        <div class="form">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">First Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="LastName" id="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="number" name="phone" id="phone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+
+        <div class="thank-you">
+            <p>Thank you for choosing BioAlba Group.</p>
+            <p>Together, let's nurture health, cultivate sustainability, and build a brighter future.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
     <footer class="footer-distributed">
 
@@ -80,6 +177,42 @@
         </p>
     </footer>
     <script src="../JS/navbar.js"></script>
+    <script src="../JS/map2.js"></script>
     
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap2">
+        </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const h1 = document.querySelector('.section1 h1');
+            const overlay = document.querySelector('.section1 .overlay');
+            const arrow = document.querySelector('#section04 a span');
+            const scrollY = window.scrollY;
+
+            // Move the h1 element down based on scroll position
+            const maxOffset = 250; // Maximum vertical offset in pixels
+            const offset = Math.min(scrollY, maxOffset); // Ensure it doesn't go beyond the maxOffset
+            h1.style.transform = `translateY(${offset}px)`; // Move the h1 element down
+
+            // Adjust the overlay opacity based on scroll position
+            const maxOpacity = 0.7; // Maximum opacity level
+            const opacity = Math.min(scrollY / 1000, maxOpacity); // Adjust sensitivity by changing the denominator
+            if (overlay) { // Only adjust if overlay exists
+                overlay.style.background = `rgba(54, 154, 126, ${0.2 + opacity})`; // Darken the color
+            }
+
+            // Detect scroll position to hide the arrow
+            if (scrollY > 0) {
+                arrow.classList.add('hidden'); // Hide arrow with class
+            } else {
+                arrow.classList.remove('hidden'); // Show arrow
+            }
+        }, { passive: true }); // Mark the event listener as passive
+
+
+    </script>
+
+
 </body>
+
 </html>
