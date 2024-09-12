@@ -20,7 +20,7 @@
   <header>
     <nav>
       <ul class='nav-bar'>
-        <li class='logo'><a href='#'><img src="../Photos/logo.png" /></a></li>
+        <li class='logo'><a href='#'><img src="../Photos/logo.png" alt="BioAlba Logo"/></a></li>
         <input type='checkbox' id='check' />
         <span class="menu">
           <li><a href="../HTML/main.html">Home</a></li>
@@ -35,15 +35,24 @@
     </nav>
   </header>
 
-  <div class="aboutHeading">
-    <h1 class="hFillimi">Welcome to <span class="green-heading-bg">Bioalba Group</span></h1>
+  <div class="pageTransition">
+  <div class="mainHeading section">
+    <div class="overlay"></div>
+    <div class="firstL">
+      <h1 class="hFillimi">Welcome to <span class="green-heading-bg">Bioalba Group</span><p class="pUnder">Cultivating Organic Excellence for a Sustainable Future</p></h1>
+    
+    </div>
+      
 
-    <p class="pUnder">Cultivating Organic Excellence for a Sustainable Future</p>
-    <div class="separator"><img src="../Photos/layeredWavesWhite.png" alt=""></div>
+    <div id="section04" class="demo">
+      <a href="#firstImage"><span></span></a>
+    </div>
   </div>
   
+  <div class="separator"><img src="../Photos/layeredWavesWhite.png" alt="alt"></div>
 
-  <div class="heading-container is-animated shkrimi">
+
+  <div class="heading-container is-animated shkrimi" id="firstImage">
 
     <div class="shkrimi main-heading">
 
@@ -330,6 +339,7 @@
 
 
   </div>
+</div>
 
   <footer class="footer-distributed">
 
@@ -377,7 +387,7 @@
     <p class="footer-company-name">Copyright © <span id="year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved
     </p>
   </footer>
-  
+
   <script src="../JS/main.js"></script>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">
@@ -385,40 +395,71 @@
   <script src="../JS/navbar.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-    // Function to check if an element is partially in the viewport (e.g., 40% visible)
-    function isElementPartiallyInViewport(el, visibilityRatio = 0.4) {
+      // Function to check if an element is partially in the viewport (e.g., 40% visible)
+      function isElementPartiallyInViewport(el, visibilityRatio = 0.4) {
         var rect = el.getBoundingClientRect();
         var elementHeight = rect.height;
         var windowHeight = window.innerHeight;
-        
+
         // Calculate how much of the element is visible
         var visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
         var visibleRatio = visibleHeight / elementHeight;
-        
-        return visibleRatio >= visibilityRatio; // Return true if the visible part is greater or equal to the ratio
-    }
 
-    // Function to handle the scroll event
-    function handleScroll() {
+        return visibleRatio >= visibilityRatio; // Return true if the visible part is greater or equal to the ratio
+      }
+
+      // Function to handle the scroll event
+      function handleScroll() {
         var elements = document.querySelectorAll('.container'); // Select all the containers that need to animate
         elements.forEach(function (el, index) {
-            if (isElementPartiallyInViewport(el, 0.4)) { // Trigger when 40% of the element is visible
-                el.style.transitionDelay = `${index * 0.1}s`; // Add staggered delay for each element
-                el.classList.add('visible'); // Add the visible class to trigger animation
-            } else {
-                el.classList.remove('visible'); // Remove the visible class to reverse animation
-            }
+          if (isElementPartiallyInViewport(el, 0.4)) { // Trigger when 40% of the element is visible
+            el.style.transitionDelay = `${index * 0.1}s`; // Add staggered delay for each element
+            el.classList.add('visible'); // Add the visible class to trigger animation
+          } else {
+            el.classList.remove('visible'); // Remove the visible class to reverse animation
+          }
         });
+      }
+
+      // Initial check in case elements are already in view
+      handleScroll();
+
+      // Listen for scroll events
+      window.addEventListener('scroll', handleScroll);
+    });
+
+
+
+    window.addEventListener('scroll', function () {
+    const firstL = document.querySelector('.firstL');
+    const overlay = document.querySelector('.section .overlay');
+    const arrow = document.querySelector('#section04 a span');
+    const scrollY = window.scrollY;
+
+    // Move the firstL element down based on scroll position
+    const maxOffset = 250; // Maximum vertical offset in pixels
+    const slowFactor = 0.7; // Adjust this factor to slow down the movement
+    const offset = Math.min(scrollY * slowFactor, maxOffset); // Ensure it doesn't go beyond the maxOffset
+    firstL.style.transform = `translateY(${offset}px)`; // Move the firstL element down
+
+    // Adjust the overlay opacity based on scroll position
+    const maxOpacity = 0.7; // Maximum opacity level
+    const opacity = Math.min(scrollY / 1000, maxOpacity); // Adjust sensitivity by changing the denominator
+    if (overlay) { // Only adjust if overlay exists
+        overlay.style.background = `rgba(54, 154, 126, ${0.2 + opacity})`; // Darken the color
     }
 
-    // Initial check in case elements are already in view
-    handleScroll();
+    // Detect scroll position to hide the arrow
+    if (scrollY > 0) {
+        arrow.classList.add('hidden'); // Hide arrow with class
+    } else {
+        arrow.classList.remove('hidden'); // Show arrow
+    }
+}, { passive: true }); // Mark the event listener as passive
 
-    // Listen for scroll events
-    window.addEventListener('scroll', handleScroll);
-});
+
+
   </script>
-
 </body>
 
 

@@ -1,6 +1,7 @@
-html{
+html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -8,36 +9,127 @@ body {
 
 }
 
-.title {
-  font-size: 2rem;
-  color: white;
-  text-shadow: 0 0 10px black;
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.section {
+/* ------------------------------------------------------ Pjesa e pare ------------------------------------------------------------- */
+
+.mainHeading {
+  background-image: url("../Photos/448 (2).jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  align-items: center;
+  padding: 20px;
+  /* Add padding for breathing space */
+}
+
+.mainHeading h1 {
+  text-shadow: 2px 2px rgb(102, 102, 102);
+}
+
+.section1 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(54, 154, 126, 0.3);
+  /* Initial semi-transparent color */
+  z-index: 1;
+  /* Place the overlay behind the h1 */
+  transition: background 0.5s ease;
+  /* Smooth transition for color change */
+}
+
+.section1 h1 {
+  top: 42vh;
+  position: relative;
+  z-index: 20;
+  font-size: 3rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  color: white;
+  
+}
+
+.section2 {
+  position: relative;
   font-size: 2rem;
   padding: 2rem;
   background-color: #369A7E;
   color: black;
+  z-index: 2;
+  margin-top: 100vh;
 }
 
-.wrap {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  perspective: 20px;
-  margin: 0;
+/* Initial arrow animation */
+#section04 a span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+  animation: sdb04 2s infinite;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-.header {
-  margin: 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  transform-style: preserve-3d;
-  z-index: -1;
+#section04 a span.hidden {
+  opacity: 0;
+  /* Hide the arrow */
+  pointer-events: none;
+  /* Prevent interaction */
+}
+
+
+/* Arrow keyframe animation */
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+.demo a {
+  position: absolute;
+  bottom: 40vh;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  color: #fff;
+  font: normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  
+}
+
+
+.title {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px black;
 }
 
 .background {
@@ -71,15 +163,6 @@ body {
   padding-top: 40px;
   font-size: 1rem;
 }
-
-/* .photoContainer {
-    padding-top: 25px;
-    display: flex;
-    justify-content: center; 
-    max-width: 100%;
-    overflow-x: auto;
-} */
-
 .photo {
   padding-top: 25px;
   display: flex;
@@ -112,35 +195,19 @@ body {
 
 /* Media query for phones */
 @media only screen and (max-width: 767px) {
-  .header {
-    height: 30vh;
-    width: 100vw;
-    margin: 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-style: preserve-3d;
-    z-index: -1;
+
+  .mainHeading{
+    background-size: cover;
+    background-position: center;
+  }
+  .section1 h1 {
+    font-size: 1.8rem;
+    
   }
 
-  .background {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 30rem;
-    transform: translateZ(-10px) scale(1.5); /* Adjust parallax effect for mobile */
+  .section h1 {
+    top: 40vh;
   }
-
-  .title {
-    font-size: 1.2rem;
-    /* max-width: 50vw; */
-
-  }
-
   .photo {
     padding-top: 25px;
     display: flex;
@@ -157,10 +224,12 @@ body {
     margin: 10px 0;
     box-shadow: 5px 5px 5px rgb(27, 26, 26);
   }
-  .responsive-table li{
+
+  .responsive-table li {
     flex-direction: column;
   }
-  #load-more{
+
+  #load-more {
     max-width: 30% !important;
   }
 }
@@ -169,10 +238,12 @@ body {
 /*  SCALLOP down  */
 /*----------------*/
 .scallop-down {
+  position: relative;
   height: 100px;
   width: 100%;
   background: radial-gradient(circle at 50% 0, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
   background-size: 49px 100%;
+  z-index: 3;
 }
 
 
@@ -180,10 +251,12 @@ body {
 /*  SCALLOP up    */
 /*----------------*/
 .scallop-up {
+  position: relative;
   height: 100px;
   width: 100%;
   background: radial-gradient(circle at 50% 100%, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
   background-size: 49px 100%;
+  z-index: 3;
 }
 
 .productH2 {
@@ -201,12 +274,13 @@ body {
 
 
 .containerTable {
-  
+
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 5vh;
 }
 
 h2 {
@@ -364,14 +438,17 @@ h2 {
 }
 
 .bgList {
+  position: relative;
   background-color: white;
+  z-index: 3;
 }
 
 /* Per load more button te lista e produkteve */
 
 #load-more {
   display: block;
-  margin: 20px auto; /* Adjust the top margin as needed */
+  margin: 20px auto;
+  /* Adjust the top margin as needed */
   max-width: 10%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -381,23 +458,28 @@ h2 {
   font-size: 16px;
   background-color: #fff;
   cursor: pointer;
-  text-align: center; /* Center aligns inline-block content */
+  text-align: center;
+  /* Center aligns inline-block content */
   border-radius: 4px;
-  
+
 }
-#load-more:hover{
+
+#load-more:hover {
   background-color: #369A7E;
   border-color: #369A7E;
   color: #fff;
 }
 
 .responsive-table .table-row {
-  display: none; /* Hide all table rows by default */
+  display: none;
+  /* Hide all table rows by default */
 }
 
 .responsive-table .table-row.visible {
-  display: flex; /* Display table rows with the 'visible' class */
+  display: flex;
+  /* Display table rows with the 'visible' class */
 }
+
 .responsive-table .table-row:nth-child(1),
 .responsive-table .table-row:nth-child(2),
 .responsive-table .table-row:nth-child(3),
@@ -412,7 +494,7 @@ h2 {
 .responsive-table .table-row:nth-child(12),
 .responsive-table .table-row:nth-child(13),
 .responsive-table .table-row:nth-child(14),
-.responsive-table .table-row:nth-child(15){
-  
-  display:flex;
+.responsive-table .table-row:nth-child(15) {
+
+  display: flex;
 }

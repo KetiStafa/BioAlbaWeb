@@ -20,7 +20,7 @@
     <header>
         <nav>
             <ul class='nav-bar'>
-                <li class='logo'><a href='#'><img src="../Photos/logo.png" /></a></li>
+                <li class='logo'><a href='#'><img src="../Photos/logo.png" alt="BioAlba Logo"/></a></li>
                 <input type='checkbox' id='check' />
                 <span class="menu">
                     <li><a href="../HTML/main.html">Home</a></li>
@@ -35,7 +35,7 @@
         </nav>
     </header>
 
-    <div class="heading-container">
+    <!-- <div class="heading-container">
         <div class="text-content">
             <h1 class="h1">Empowering Communities and <span>Nurturing Sustainability</span></h1>
             <p class="p1">
@@ -46,7 +46,31 @@
             </p>
         </div>
         <div class="separator"><img src="../Photos/layeredWavesWhite.png" alt=""></div>
+    </div> -->
+
+
+
+<div class="pageTransition">
+
+    <div class="mainHeading section">
+        <div class="overlay"></div>
+        <div class="firstL">
+            <h1 class="hFillimi">Empowering Communities and <span>Nurturing Sustainability</span></span>
+                <p class="pUnder">At BioAlba, we are more than just an organic medicinal plants producer;
+                    we are committed to making a positive impact on communities and the environment.
+                    Our environmentally friendly approach is socially focused in that we support local farmers and
+                    community
+                    organizations.</p>
+            </h1>
+
+        </div>
+
+        <div id="section04" class="demo">
+            <a href="#"><span></span></a>
+        </div>
     </div>
+
+    <div class="separator"><img src="../Photos/layeredWavesWhite.png" alt="layeredWavesWhite"></div>
 
 
 
@@ -85,63 +109,6 @@
         <p>BioAlba is committed to producing and guaranteeing organic quality and, through it, contributing to
             environmental protection.</p>
     </div>
-    <!-- <section class="our-work section">
-        <div class="container sticky">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-4">
-                </div>
-                <div class="col-12 col-md-8 slider">
-                    <div class="carousel__slider">
-                        <div class="carousel__item" id="our-work-1">
-                            <h2 class="blurred-box__title wow animated" style="visibility: visible;">Supporting
-                                Small Farmers</h2>
-                            <div class="blurred-box__footer">
-                                <span class="blurred-box__footer-line wow animated" style="visibility: visible;"></span>
-                                <p class="blurred-box__text wow animated" style="visibility: visible;">We empower
-                                    small and medium farmers in remote areas,
-                                    encouraging them to work together while providing them with access to
-                                    international markets.</p>
-                            </div>
-                        </div>
-                        <div class="carousel__item" id="our-work-2">
-                            <h2 class="blurred-box__title">Training and Education</h2>
-                            <div class="blurred-box__footer">
-                                <span class="blurred-box__footer-line"></span>
-                                <p class="blurred-box__text">We provide training and support for inputs,
-                                    including seeds and plant protection products, allowed in organic cultivation.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel__item" id="our-work-3">
-                            <h2 class="blurred-box__title">Social Impact</h2>
-                            <div class="blurred-box__footer">
-                                <span class="blurred-box__footer-line"></span>
-                                <p class="blurred-box__text">3% of our income is dedicated to supporting local
-                                    organizations,
-                                    youth empowerment, and women at risk.</p>
-                            </div>
-                        </div>
-                        <div class="carousel__item" id="our-work-4">
-                            <h2 class="blurred-box__title">Community Engagement</h2>
-                            <div class="blurred-box__footer">
-                                <span class="blurred-box__footer-line"></span>
-                                <p class="blurred-box__text">We engage with local farming communities to educate
-                                    them about market trends,
-                                    organic standards, environmental protection, and sustainability.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <ul class="carousel__nav">
-                    <li class="carousel__nav__item" data-target="our-work-1"></li>
-                    <li class="carousel__nav__item" data-target="our-work-2"></li>
-                    <li class="carousel__nav__item" data-target="our-work-3"></li>
-                    <li class="carousel__nav__item" data-target="our-work-4"></li>
-                </ul>
-            </div>
-        </div>
-    </section> -->
 
     <div class="scallop-up"></div>
 
@@ -173,16 +140,17 @@
     <div class="scallop-down"></div>
     <div class="content-wrapper">
         <div class="text-content">
-          <p>Join us on this journey, where farmers are partners, social responsibility is paramount,
-             and our commitment to organic excellence is unwavering.
-             Together, we cultivate a sustainable and healthier future.</p>
-             <a href="../HTML/contactUs.html"><button class="cButton">Contact Us</button></a>
+            <p>Join us on this journey, where farmers are partners, social responsibility is paramount,
+                and our commitment to organic excellence is unwavering.
+                Together, we cultivate a sustainable and healthier future.</p>
+            <a href="../HTML/contactUs.html"><button class="cButton">Contact Us</button></a>
 
         </div>
         <div class="image-content">
-          <img src="../Photos/helpingHands_resized.png" alt="Hand holding organic seeds">
+            <img src="../Photos/helpingHands_resized.png" alt="Hand holding organic seeds">
         </div>
-      </div>
+    </div>
+</div>
 
     <footer class="footer-distributed">
 
@@ -234,44 +202,71 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    // Function to check if an element is in the viewport
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top < window.innerHeight && // Element's top is above the bottom of the viewport
-            rect.bottom >= 0 // Element's bottom is below the top of the viewport
-        );
-    }
-
-    // Function to handle the scroll event
-    function handleScroll() {
-        var elements = document.querySelectorAll('.ourWork div'); // Select all the elements that need to animate
-        elements.forEach(function (el, index) {
-            if (isElementInViewport(el)) {
-                el.style.transitionDelay = `${index * 0.15}s`; // Add staggered delay for each element
-                el.classList.add('visible'); // Add the visible class to trigger animation
-            } else {
-                el.classList.remove('visible'); // Remove the visible class to reverse animation
+            // Function to check if an element is in the viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top < window.innerHeight && // Element's top is above the bottom of the viewport
+                    rect.bottom >= 0 // Element's bottom is below the top of the viewport
+                );
             }
+
+            // Function to handle the scroll event
+            function handleScroll() {
+                var elements = document.querySelectorAll('.ourWork div'); // Select all the elements that need to animate
+                elements.forEach(function (el, index) {
+                    if (isElementInViewport(el)) {
+                        el.style.transitionDelay = `${index * 0.15}s`; // Add staggered delay for each element
+                        el.classList.add('visible'); // Add the visible class to trigger animation
+                    } else {
+                        el.classList.remove('visible'); // Remove the visible class to reverse animation
+                    }
+                });
+            }
+
+            // Initial check in case elements are already in view
+            handleScroll();
+
+            // Listen for scroll events
+            window.addEventListener('scroll', handleScroll);
         });
-    }
 
-    // Initial check in case elements are already in view
-    handleScroll();
 
-    // Listen for scroll events
-    window.addEventListener('scroll', handleScroll);
-});
+
+
+
+        window.addEventListener('scroll', function () {
+            const firstL = document.querySelector('.firstL');
+            const overlay = document.querySelector('.section .overlay');
+            const arrow = document.querySelector('#section04 a span');
+            const scrollY = window.scrollY;
+
+            // Move the firstL element down based on scroll position
+            const maxOffset = 250; // Maximum vertical offset in pixels
+            const slowFactor = 0.7; // Adjust this factor to slow down the movement
+            const offset = Math.min(scrollY * slowFactor, maxOffset); // Ensure it doesn't go beyond the maxOffset
+            firstL.style.transform = `translateY(${offset}px)`; // Move the firstL element down
+
+            // Adjust the overlay opacity based on scroll position
+            const maxOpacity = 0.7; // Maximum opacity level
+            const opacity = Math.min(scrollY / 1000, maxOpacity); // Adjust sensitivity by changing the denominator
+            if (overlay) { // Only adjust if overlay exists
+                overlay.style.background = `rgba(54, 154, 126, ${0.2 + opacity})`; // Darken the color
+            }
+
+            // Detect scroll position to hide the arrow
+            if (scrollY > 0) {
+                arrow.classList.add('hidden'); // Hide arrow with class
+            } else {
+                arrow.classList.remove('hidden'); // Show arrow
+            }
+        }, { passive: true }); // Mark the event listener as passive
     </script>
 
 
 
 </body>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-<script src="../JS/verticalCarousel.js"></script> -->
 <script src="../JS/navbar.js"></script>
 
 </html>

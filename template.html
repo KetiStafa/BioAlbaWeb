@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainHeading {
+    background-image: url("../Photos/Camomilla.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    align-items: center;
+}
+.section1 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(54, 154, 126, 0.3);
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+.section1 h1 {
+    top: 45vh;
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: white;
+}
+/* Arrow animation */
+.demo a {
+    position: absolute;
+    bottom: 40vh;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    color: #fff;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Initial arrow animation */
+#section04 a span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    animation: sdb04 2s infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#section04 a span.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .mainHeading{
+        background-size: cover;
+    background-position: center;
+    }
+}
+@media (max-width: 480px) {
+    .section1 h1 {
+        font-size: 2rem;
+    }
+
+}
+/*----------------------------------------------------- Properties  qe do kene divet e tjera ------------------------------------------*/
+/* div{
+    position: relative;
+    height: 50vh; varet
+    z-index: 2;
+    margin-top: 100vh;
+    } */
+    </style>
+    <script>
+        window.addEventListener('scroll', function () {
+            const h1 = document.querySelector('.section1 h1');
+            const overlay = document.querySelector('.section1 .overlay');
+            const arrow = document.querySelector('#section04 a span');
+            const scrollY = window.scrollY;
+
+            // Move the h1 element down based on scroll position
+            const maxOffset = 250; // Maximum vertical offset in pixels
+            const offset = Math.min(scrollY, maxOffset); // Ensure it doesn't go beyond the maxOffset
+            h1.style.transform = `translateY(${offset}px)`; // Move the h1 element down
+
+            // Adjust the overlay opacity based on scroll position
+            const maxOpacity = 0.7; // Maximum opacity level
+            const opacity = Math.min(scrollY / 1000, maxOpacity); // Adjust sensitivity by changing the denominator
+            if (overlay) { // Only adjust if overlay exists
+                overlay.style.background = `rgba(54, 154, 126, ${0.2 + opacity})`; // Darken the color
+            }
+
+            // Detect scroll position to hide the arrow
+            if (scrollY > 0) {
+                arrow.classList.add('hidden'); // Hide arrow with class
+            } else {
+                arrow.classList.remove('hidden'); // Show arrow
+            }
+        }, { passive: true }); // Mark the event listener as passive
+
+
+    </script>
+</head>
+<body>
+    <div class="mainHeading section section1"></div>
+        <div class="overlay"></div>
+        <h1>Shkruaj ketu</h1>
+        <div id="section04" class="demo">
+            <a href="#"><span></span></a>
+        </div>
+    </div>
+    
+</body>
+</html>
