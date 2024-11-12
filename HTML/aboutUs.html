@@ -23,11 +23,11 @@
         <li class='logo'><a href='#'><img src="../Photos/logo.png" alt="BioAlba Logo"/></a></li>
         <input type='checkbox' id='check' />
         <span class="menu">
-          <li><a href="../HTML/main.html">Home</a></li>
-          <li><a href="../HTML/products.html">Products</a></li>
-          <li><a href="../HTML/csr.html">Corporate Social Responsibility</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="../HTML/contactUs.html">Contact Us</a></li>
+          <li><a href="../HTML/main.html" aria-label="Home">Home</a></li>
+          <li><a href="../HTML/aboutUs.html" aria-label="About Us">About Us</a></li>
+          <li><a href="../HTML/csr.html" aria-label="Corporate Social Responsibility">Corporate Social Responsibility</a></li>
+          <li><a href="../HTML/products.html" aria-label="Products">Products</a></li>
+          <li><a href="../HTML/contactUs.html" aria-label="Contact Us">Contact Us</a></li>
           <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
         </span>
         <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
@@ -446,7 +446,7 @@
     const maxOpacity = 0.7; // Maximum opacity level
     const opacity = Math.min(scrollY / 1000, maxOpacity); // Adjust sensitivity by changing the denominator
     if (overlay) { // Only adjust if overlay exists
-        overlay.style.background = `rgba(54, 154, 126, ${0.2 + opacity})`; // Darken the color
+        overlay.style.background = `rgba(109,123,48, ${0.2 + opacity})`; // Darken the color
     }
 
     // Detect scroll position to hide the arrow

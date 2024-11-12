@@ -4,6 +4,45 @@
   padding: 0;
 }
 
+
+.top-bar {
+  background-color: #707c34; /* olive green background */
+  padding: 8px 0;
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.message {
+  font-weight: bold;
+}
+
+.divider {
+  color: #ddd;
+}
+
+.contact {
+  color: white;
+  text-decoration: none;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -19,16 +58,16 @@ body {
   padding: 12px 20px;
   height: 80px;
   z-index: 300;
-  background-color: transparent;
-  
+  background-color: white;
+  margin-top: 30px;
 }
 
 .nav-bar.scrolled {
-  background-color: black;
+  background-color: white;
 }
 
 .nav-bar.scrolled .menu li a {
-  color: white;
+  color: black;
 }
 
 .nav-bar.scrolled .open-menu,
