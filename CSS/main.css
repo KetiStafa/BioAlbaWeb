@@ -78,6 +78,8 @@ html{
 .overlay-text h1 {
     font-size: 48px;
     color: #FFA500; 
+    font-family: "Brush Script MT", cursive;
+    font-size: 6vw;
     font-weight: bold;
     margin: 10px 0;
 }
@@ -113,6 +115,7 @@ html{
     border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
+    margin-top: 5vh;
 }
 
 .about-button:hover {
@@ -120,10 +123,58 @@ html{
     color: white;
 }
 
+.product-button{
+    display:inline-block;
+    padding: 12px 24px;
+    margin-bottom: 40px;
+    width: 15%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color:#f9f7f5;
+    background-color:#707c34;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 5vh;
+}
+
+.product-button:hover {
+    background-color:#f4f4f0; 
+    color:#707c34;
+}
+
+.csr-button{
+    display:inline-block;
+    padding: 12px 24px;
+    width: 15%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color:#f9f7f5;
+    background-color:#707c34;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 5vh;
+}
+
+.csr-button:hover {
+    background-color:#f4f4f0; 
+    color:#707c34;
+}
+
+
+
+
 .Products h3{
     color:#707c34;
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: "Brush Script MT", cursive;
+    font-size: 4vw;
     margin-top: 40px;
     text-align: center;
 }
@@ -133,7 +184,191 @@ html{
     margin-top: 20px;
     padding-left: 15vw;
     padding-right: 15vw;
-    padding-bottom: 20vw;
+    padding-bottom: 8vw;
+}
+
+
+.image-row {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 40px; /* Optional: spacing between image boxes */
+    background: linear-gradient(to bottom, white 50%, #b8bc7c 50%);
+    
+  }
+
+  /* Style for each image container (box) */
+.image-box {
+    background-color: white; /* White background for the box */
+    padding: 20px; /* Padding around the image inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Optional: shadow to make it stand out */
+    display: inline-block; /* Makes the box inline with others */
+  }
+
+  /* Style for each square image */
+.image-box img {
+    width: 190px; /* Width of each square */
+    height: 210px; /* Height of each square */
+    object-fit: cover; /* Ensures images fill the square */
+    
+  }
+  
+
+/* .QC{
+    background-color: #b8bc7c;
+}
+.QC h3{
+    color:#f4f4f0;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-top: 10vw;
+    text-align: center;
+}
+.QC .content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.eco img {
+    width: 350px;
+    height: 300px;
+    margin-right: 20px; 
+}
+
+.QC p {
+    color: #f4f5f2;
+    text-align: left; 
+    margin-top: 20px;
+    padding-left: 15vw;
+    padding-right: 15vw;
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* Main section styling */
+.QC {
+    background-color: #b8bc7c;
+    padding: 5vw 0; /* Adds padding for vertical spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title styling */
+.QC h3 {
+    color: #f4f4f0;
+    font-size: 6vw; /* Responsive font size */
+    font-family: "Brush Script MT", cursive;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Content layout */
+.QC .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    max-width: 1200px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+/* Heart-shaped image styling */
+.eco {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.eco img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.right-side h4{
+    color:#707c34;
+    margin-bottom: 20px;
+}
+
+/* Paragraph text styling */
+.QC p {
+    color: #f4f5f2;
+    font-size: 1.1vw; /* Responsive font size */
+    text-align: left;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.CSR {
+    background-color: #b8bc7c;
+    padding: 5vw 0; /* Adds padding for vertical spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.CSR h3 {
+    color: #f4f4f0;
+    font-size: 4vw; /* Responsive font size */
+    font-family: "Brush Script MT", cursive;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.CSR h4{
+    color:#707c34;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.CSR p{
+    color: #f4f5f2;
+    font-size: 1.1vw; /* Responsive font size */
+    text-align: left;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+
+
+
+.layered-waves{
+    rotate:180deg;
+    width: 100%;
+}
+
+.layered-waves img{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.layered-waves1{
+    margin-top: -400px;
+    width: 100%;
+}
+
+.layered-waves1 img{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.sera {
+    margin-top: -200px; 
+}
+
+.sera img {
+    width: 100%;
+    display: block;
 }
 
 
