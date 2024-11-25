@@ -123,7 +123,7 @@ html{
     color: white;
 }
 
-.product-button{
+/* .product-button{
     display:inline-block;
     padding: 12px 24px;
     margin-bottom: 40px;
@@ -143,28 +143,62 @@ html{
 .product-button:hover {
     background-color:#f4f4f0; 
     color:#707c34;
-}
+} */
 
-.csr-button{
-    display:inline-block;
-    padding: 12px 24px;
-    width: 15%;
-    height: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    color:#f9f7f5;
-    background-color:#707c34;
-    border: none;
+ .csr-button{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 4vh;
+    padding: 10px 20px;
+    border: 1px solid #707c34;
+    background-color: white;
+    color: #707c34;
+    font-size: medium;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: color 0.4s ease-out, padding 0.4s ease-out; 
+    letter-spacing: 1.5px;
+    z-index: 1;
     text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 5vh;
 }
 
 .csr-button:hover {
-    background-color:#f4f4f0; 
-    color:#707c34;
+    color: white;
+    padding: 10px 40px;
+    padding-left: 20px;
 }
+.csr-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #707c34;
+    z-index: -1;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .csr-button:hover::before {
+    width: 100%;
+  }
+  
+  .csr-button::after {
+    content: "→";
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out, right 0.4s ease-in-out;
+    color: white;
+    padding-right: 10px;
+  }
+  
+  .csr-button:hover::after {
+    right: 5px; 
+    opacity: 1;
+  } 
 
 
 
@@ -341,6 +375,7 @@ html{
 
 
 .layered-waves{
+    margin-top: -10px;
     rotate:180deg;
     width: 100%;
 }
@@ -371,7 +406,65 @@ html{
     display: block;
 }
 
+ .product-button {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 4vh;
+    padding: 10px 20px;
+    border: 1px solid #707c34;
+    background-color: white;
+    color: #707c34;
+    font-size: medium;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: color 0.4s ease-out, padding 0.4s ease-out; 
+    letter-spacing: 1.5px;
+    z-index: 1;
+    text-decoration: none;
+  }
+  
+  .product-button:hover {
+    color: white;
+    padding: 10px 40px;
+    padding-left: 20px;
+  }
+  
+  .product-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #707c34;
+    z-index: -1;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .product-button:hover::before {
+    width: 100%;
+  }
+  
+  .product-button::after {
+    content: "→";
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out, right 0.4s ease-in-out;
+    color: white;
+    padding-right: 10px;
+  }
+  
+  .product-button:hover::after {
+    right: 5px; 
+    opacity: 1;
+  }
+
+
+  /************************************************************ Media Queries **********************************************************/
 
 
 
-
+  

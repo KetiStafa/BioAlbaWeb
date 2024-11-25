@@ -14,7 +14,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 90;
+  z-index: 300;
 }
 
 .top-bar-content {
@@ -23,6 +23,7 @@
   justify-content: center;
   gap: 10px;
   font-size: 14px;
+  z-index: 300;
 }
 
 .message {
