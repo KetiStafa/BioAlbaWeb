@@ -328,8 +328,8 @@ body{
     .split-container {
         flex-direction: column; /* Stacks items vertically on smaller screens */
         animation: appearD linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 35%;
+        animation-timeline: view();
+        animation-range: entry 0% cover 35%;
     }
 
     .text-container {
