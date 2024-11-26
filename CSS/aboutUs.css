@@ -184,6 +184,7 @@ html {
 
 .content {
   flex: 1;
+  color: white;
 }
 
 .title {
@@ -200,14 +201,13 @@ html {
 }
 
 .container:last-child {
-
   margin: 20 auto;
 }
 
 .container:hover {
   box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.9);
   background: linear-gradient(to right, rgba(90, 99, 90, 0.442) 0%, rgba(79, 112, 8, 0.5) 80%);
-  color: white;
+  color: white !important;
   cursor: pointer;
 
 }

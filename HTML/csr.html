@@ -16,8 +16,14 @@
 
 <body>
 
-
     <header>
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <span class="message">Go Organic, Improve Lives</span>
+                <span class="divider">|</span>
+                <a href="mailto:info@bioalba.al" class="contact">info@bioalba.al</a>
+                <a href="tel:+35568206262" class="contact">📞 +355 68 20 622 62</a>
+        </div>
         <nav>
             <ul class='nav-bar'>
                 <li class='logo'><a href='#'><img src="../Photos/logo.png" alt="BioAlba Logo"/></a></li>
@@ -109,11 +115,13 @@
             environmental protection.</p>
     </div>
 
-    <div class="scallop-up"></div>
-
     <div class="belowOurWork">
         <!-- <h4 class="h4">BioAlba is committed to producing and guaranteeing organic quality and,
              through it, contributing to environmental protection.</h4> -->
+
+        <div class="scallop-up">
+            <img src="../Photos/screenshot.png" alt="alt">
+        </div>
 
         <h3 class="h3">More Than Clients: Our Farmers Are Our Partners</h3>
 
@@ -133,10 +141,16 @@
             </div>
         </div>
 
+        <div class="scallop-down">
+            <img src="../Photos/screenshot.png" alt="alt">
+        </div>
+    
 
 
     </div>
-    <div class="scallop-down"></div>
+
+    
+
     <div class="content-wrapper">
         <div class="text-content">
             <p>Join us on this journey, where farmers are partners, social responsibility is paramount,
@@ -250,7 +264,7 @@
             const maxOpacity = 0.7; // Maximum opacity level
             const opacity = Math.min(scrollY / 1000, maxOpacity); // Adjust sensitivity by changing the denominator
             if (overlay) { // Only adjust if overlay exists
-                overlay.style.background = `rgba(54, 154, 126, ${0.2 + opacity})`; // Darken the color
+                overlay.style.background = `rgba(109,123,48, ${0.2 + opacity})`; // Darken the color
             }
 
             // Detect scroll position to hide the arrow

@@ -122,24 +122,30 @@ body{
     z-index: 100;
     
   }
-.scallop-up {
-    position: relative;
-    z-index: 100;
-    padding-top: 10%;
-    height: 100px;
-    width: 100%;
-    background: radial-gradient(circle at 50% 100%, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
-    background-size: 49px 100%;
-}
 
-.scallop-down {
-    position: relative;
-    z-index: 100;
-    height: 100px;
+  .scallop-up{
     width: 100%;
-    background: radial-gradient(circle at 50% 0, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
-    background-size: 49px 100%;
-}
+    z-index: 100;
+    background-color: white;
+  }
+  
+  .scallop-up img{
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: -2vw;
+  }
+  
+  .scallop-down{
+    rotate: 180deg !important;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+  }
+  
+  .scallop-down img{
+    width: 100% !important;
+    height: auto !important;
+  } 
 
 .focus {
     position: relative;
@@ -152,7 +158,10 @@ body{
 
 .focusH2 {
     margin: 0;
-    color: black;
+    color:#707c34;
+    font-family: "Brush Script MT", cursive;
+    font-size: 5vw;
+    font-weight: bold;
     padding-bottom: 5vh;
 }
 
@@ -198,10 +207,12 @@ body{
     padding-top: 5vh;
     color: white;
     text-align: center;
-    font-weight: 600;
+    font-family: "Brush Script MT", cursive;
+    font-size: 4vw;
+    font-weight: bold;
 }
 .belowOurWork{
-    background-color: #369A7E;
+    background-color:#b8bc7c;
     position: relative;
     z-index: 100;
 }
@@ -222,7 +233,7 @@ body{
 .ourWork div {
     flex: 1 1 calc(25% - 20px);
     box-sizing: border-box;
-    background: #369A7E;
+    background:#b8bc7c;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -311,7 +322,7 @@ body{
     .focusH2 {
         font-size: 1.5rem;
     }
-
+    
     .blurred-box__title,
     .blurred-box__text {
         font-size: 1rem;
@@ -330,6 +341,7 @@ body{
         animation: appearD linear;
         animation-timeline: view();
         animation-range: entry 0% cover 35%;
+        margin-bottom: -2vw;
     }
 
     .text-container {
@@ -358,7 +370,7 @@ body{
     text-align: center;
     padding: 20px; 
     font-size: 1rem;
-    color: black;
+    color:#707c34;
     font-weight: 500;
     background-color: white;
 }
@@ -436,7 +448,7 @@ body{
     flex: 1;
     font-size: 1.1rem;
     line-height: 1.7;
-    color: black;
+    color:#707c34;
     font-weight: 500;
     animation: appearM linear;
     animation-timeline: view();
@@ -461,9 +473,9 @@ body{
     position: relative;
     margin-top: 30px;
     padding: 10px 20px; /* Initial padding */
-    border: 2px solid #369A7E;
+    border: 2px solid #707c34;
     background-color: white;
-    color: #369A7E;
+    color: #707c34;
     font-size: medium;
     cursor: pointer;
     font-weight: 500;
@@ -487,7 +499,7 @@ body{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #369A7E;
+    background-color: #707c34;
     z-index: -1;
     transition: width 0.4s ease-in-out;
   }
@@ -511,6 +523,8 @@ body{
     opacity: 1;
   }
   
+
+
   
   
   
