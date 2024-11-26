@@ -88,6 +88,7 @@ html {
 .scallop-down{
   rotate:180deg;
   width: 100%;
+  background-color: white;
 }
 
 .scallop-down img{
