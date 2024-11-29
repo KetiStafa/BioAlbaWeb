@@ -45,11 +45,11 @@ html, body {
 }
 
 .block2:hover {
-    background-color: #82cfb9;
+    background-color: #f8d496;
 }
 
 .block3:hover {
-    background-color: #82cfb9;
+    background-color: #c1c58d;
 }
 
 
@@ -202,7 +202,7 @@ html, body {
 }
 
 .block.block3 a {
-    color: #369A7E;
+    color: #707c34;
     text-decoration: none;
 }
 
@@ -231,8 +231,8 @@ html, body {
     padding: 10vh 5vw;
     background-color: #f9f9f9;
     border-radius: 20px;
-    border-top: 3px solid #369A7E;
-    border-bottom: 3px solid #369A7E;
+    border-top: 3px solid #707c34;
+    border-bottom: 3px solid #707c34;
     box-shadow: 0 5px 8px rgba(0.4, 0, 0, 0);
 
 }
@@ -291,15 +291,15 @@ textarea {
 /* Focus effect for input and textarea */
 input:focus,
 textarea:focus {
-    border-color: #369A7E;
+    border-color: #707c34;
     outline: none;
-    box-shadow: 0 0 5px rgba(54, 154, 126, 0.5);
+    box-shadow: 0 0 5px rgba(132, 164, 85, 0.5);
 }
 
 /* Submit button styling */
 button[type="submit"] {
     padding: 12px;
-    background-color: #369A7E;
+    background-color: #707c34;
     color: white;
     border: none;
     border-radius: 4px;
@@ -311,7 +311,7 @@ button[type="submit"] {
 
 /* Submit button hover effect */
 button[type="submit"]:hover {
-    background-color: #2a7c63;
+    background-color: #707c34;
 }
 
 .contactH2 {
@@ -327,7 +327,7 @@ button[type="submit"]:hover {
     text-align: center;
     font-size: 1.2rem;
     color: #333;
-    border-top: 2px solid #369A7E;
+    border-top: 2px solid #707c34;
     margin-top: 50px;
 }
 
@@ -432,11 +432,11 @@ button[type="submit"]:hover {
 
 .hr {
     border-width: 0 0 2px;
-    color: #369A7E;
+    color: #707c34;
     border-image: linear-gradient(90deg,
-            rgba(#369A7E, 0),
-            rgba(#369A7E, 1) 50%,
-            rgba(#369A7E, 0) 100%) 0 0 100%;
+            rgba(#707c34, 0),
+            rgba(#707c34, 1) 50%,
+            rgba(#707c34, 0) 100%) 0 0 100%;
     border-style: solid;
 
 }

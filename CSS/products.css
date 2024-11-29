@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ------------------------------------------------------ Pjesa e pare ------------------------------------------------------------- */
+/* ----------------------- Pjesa e pare ----------------------------- */
 
 .mainHeading {
   background-image: url("../Photos/448 (2).jpg");
@@ -45,7 +45,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(54, 154, 126, 0.3);
+  background: rgba(144, 154, 54, 0.3);
   /* Initial semi-transparent color */
   z-index: 1;
   /* Place the overlay behind the h1 */
@@ -67,12 +67,26 @@ body {
 .section2 {
   position: relative;
   font-size: 2rem;
-  padding: 2rem;
-  background-color: #369A7E;
+  padding-bottom: 2rem;
+  background-color:#b8bc7c;
   color: black;
   z-index: 2;
   margin-top: 100vh;
+  margin-bottom: -100px;
 }
+
+.section2 .scallop-down{
+    rotate:180deg;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+  }
+  
+.section2 .scallop-down img{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
 
 /* Initial arrow animation */
 #section04 a span {
@@ -158,6 +172,12 @@ body {
   color: white;
 }
 
+.content h5{
+  font-family: "Brush Script MT", cursive;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
 .content p {
   text-align: center;
   padding-top: 40px;
@@ -237,33 +257,29 @@ body {
 /*----------------*/
 /*  SCALLOP down  */
 /*----------------*/
-.scallop-down {
-  position: relative;
-  height: 100px;
+/* .scallop-down{
+  rotate:180deg;
   width: 100%;
-  background: radial-gradient(circle at 50% 0, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
-  background-size: 49px 100%;
-  z-index: 3;
+  background-color: white;
 }
 
+.scallop-down img{
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+} */
 
-/*----------------*/
-/*  SCALLOP up    */
-/*----------------*/
-.scallop-up {
-  position: relative;
-  height: 100px;
-  width: 100%;
-  background: radial-gradient(circle at 50% 100%, #369A7E 0%, #369A7E 49%, #fff 51%, white 100%);
-  background-size: 49px 100%;
-  z-index: 3;
-}
+
 
 .productH2 {
   text-align: center;
   margin: 0;
+  color:#707c34;
   background-color: white;
   padding-bottom: 25px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 4vw;
+  font-weight: bold;
 }
 
 
@@ -310,8 +326,8 @@ h2 {
 
   .table-row {
 
-    color: black;
-    border-bottom: 1px solid #369A7E;
+    color: #707c34;
+    border-bottom: 1px solid #b8bc7c;
     background-color: transparent;
     transition: background-color 0.4s ease-in-out;
     position: relative;
@@ -328,9 +344,9 @@ h2 {
     width: 100%;
     height: 100%;
     border-radius: 3px;
-    background-color: #369A7E;
+    background-color:#b8bc7c;
     /* Initial background color */
-    transition: left 0.4s ease-in-out;
+    transition: left 0.6s ease-in-out;
     /* Transition effect for left property */
     z-index: 1;
 
@@ -346,9 +362,9 @@ h2 {
     width: 100%;
     height: 100%;
     border-radius: 3px;
-    background-color: #369A7E;
+    background-color: #8e985f;
     /* Initial background color */
-    transition: left 0.4s ease-in-out;
+    transition: left 0.6s ease-in-out;
     /* Transition effect for left property */
     z-index: 1;
   }
@@ -425,7 +441,7 @@ h2 {
 
 #searchInput {
   border: none;
-  border-bottom: 1px solid #369A7E;
+  border-bottom: 1px solid #707c34;
   padding: 5px 10px;
   font-size: 16px;
   width: 50%;
@@ -434,7 +450,7 @@ h2 {
 
 #searchInput:focus {
   outline: none;
-  border-bottom: 1px solid #369A7E;
+  border-bottom: 1px solid #707c34;
 }
 
 .bgList {
@@ -453,8 +469,8 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px 30px;
-  border: 1px solid #369A7E;
-  color: #369A7E;
+  border: 1px solid #707c34;
+  color: #707c34;
   font-size: 16px;
   background-color: #fff;
   cursor: pointer;
@@ -465,8 +481,8 @@ h2 {
 }
 
 #load-more:hover {
-  background-color: #369A7E;
-  border-color: #369A7E;
+  background-color: #707c34;
+  border-color: #707c34;
   color: #fff;
 }
 

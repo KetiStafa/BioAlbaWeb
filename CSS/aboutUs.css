@@ -11,6 +11,7 @@ html {
   color: rgb(57, 57, 57);
   text-shadow: 2px 2px rgb(58, 58, 58);
   z-index: 100;
+  font-weight: bold;
 }
 .pUnder {
   
@@ -37,7 +38,7 @@ html {
   margin: 0 auto;
   padding: 60px 8vw;
   font-weight: 500;
-  color: rgb(57, 57, 57);
+  color:#707c34;
 }
 
 .shkrimi h1 {
@@ -77,34 +78,47 @@ html {
 
 .icon {
   margin-right: 20px;
+  fill:#707c34
 }
 
-/*----------------*/
-/*  SCALLOP down    */
-/*----------------*/
-.scallop-down {
-  height: 100px;
+
+
+
+
+.scallop-down{
+  rotate:180deg;
   width: 100%;
-  background: radial-gradient(circle at 50% 0, #707c34 0%, #707c34 49%, #fff 51%, white 100%);
-  background-size: 49px 100%;
+  background-color: white;
 }
 
+.scallop-down img{
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
 
-/*----------------*/
-/*  SCALLOP up    */
-/*----------------*/
-.scallop-up {
-  height: 100px;
+.scallop-up{
+  margin-top:-200px;
   width: 100%;
-  background: radial-gradient(circle at 50% 100%, #707c34 0%, #707c34 49%, #fff 51%, white 100%);
-  background-size: 49px 100%;
 }
+
+.scallop-up img{
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+} 
 
 .ourJourney {
-  background-color: #707c34;
+  background-color: #b8bc7c;
   text-align: center;
   color: white;
 
+}
+
+.ourJourney h2{
+  font-family: "Brush Script MT", cursive;
+  font-size: 5vw;
+  font-weight: bold;
 }
 
 .ourJourney p {
@@ -171,6 +185,7 @@ html {
 
 .content {
   flex: 1;
+  color: white;
 }
 
 .title {
@@ -178,21 +193,22 @@ html {
   margin-bottom: 20px;
   text-align: center;
   font-weight: 550;
+  color:#707c34;
 }
 
 .description {
   font-size: 16px;
+  color:#707c34;
 }
 
 .container:last-child {
-
   margin: 20 auto;
 }
 
 .container:hover {
   box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.9);
   background: linear-gradient(to right, rgba(90, 99, 90, 0.442) 0%, rgba(79, 112, 8, 0.5) 80%);
-  color: white;
+  color: white !important;
   cursor: pointer;
 
 }
@@ -215,6 +231,13 @@ html {
   animation: appearM linear;
   animation-timeline: view();
   animation-range: entry 0% cover 35%;
+  color:#707c34;
+}
+.otherServices h2{
+  color:#707c34;
+  font-family: "Brush Script MT", cursive;
+  font-size: 5vw;
+  font-weight: bold;
 }
 
 .contWhereWeOp {
@@ -224,6 +247,7 @@ html {
   justify-content: space-between;
   align-items: flex-start;
   background-color: #707c34;
+  margin-top: 15vw;
 }
 
 .whereWeOperate {
@@ -261,6 +285,9 @@ html {
 
 .whereWeOperate h2 {
   margin-bottom: 30px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 5vw;
+  font-weight: bold;
 }
 
 .mapContainer {
@@ -284,11 +311,17 @@ html {
 
 .howWeWork .p {
   text-align: center;
-
+  color:#707c34;
   margin: 0 auto;
   max-width: 1000px;
   padding: 20px 40px;
 
+}
+.howWeWork h2{
+  font-family: "Brush Script MT", cursive;
+  font-size: 5vw;
+  font-weight: bold;
+  color:#707c34;
 }
 
 .containerHowWeWork {
@@ -492,7 +525,7 @@ html {
   padding-left: 0.55rem;
   padding-right: 0.55rem;
   transition: background-size 1s 1s ease; */
-  color: #707c34;
+  color: #FFA500;
 }
 
 .separator img {
@@ -628,3 +661,7 @@ html {
   background-color: white;
 
 }
+
+
+
+
