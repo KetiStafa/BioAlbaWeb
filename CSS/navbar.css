@@ -68,7 +68,7 @@ body {
 }
 
 .nav-bar.scrolled .menu li a {
-  color: black;
+  color:#707c34;
 }
 
 .nav-bar.scrolled .open-menu,
@@ -96,7 +96,7 @@ body {
 .menu li a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color:#707c34;
   text-align: center;
   transition: 0.15s ease-in-out;
   position: relative;
@@ -111,7 +111,7 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #369A7E;
+  background-color:#707c34;
   transition: 0.15s ease-in-out;
 }
 
