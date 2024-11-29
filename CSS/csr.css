@@ -320,7 +320,7 @@ body{
         font-size: 0.9rem;
     }
     .focusH2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
     .blurred-box__title,
@@ -357,6 +357,10 @@ body{
       .image-content {
         text-align: center;
         margin-top: 20px;
+      }
+      .h3{
+        font-size: 1.6rem;
+        padding: 5vh 5vw 0 5vw;
       }
 
 

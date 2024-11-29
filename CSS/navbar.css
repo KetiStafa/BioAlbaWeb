@@ -60,7 +60,6 @@ body {
   height: 80px;
   z-index: 300;
   background-color: white;
-  margin-top: 30px;
 }
 
 .nav-bar.scrolled {
@@ -178,5 +177,51 @@ body {
 
   #check:checked~.menu {
     right: 0;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-bar .menu li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-bar input[type="checkbox"]:checked ~ .menu {
+    display: flex;
+  }
+
+  .open-menu, .close-menu {
+    display: block;
+  }
+
+  .open-menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #707c34;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  .message{
+    font-size: smaller;
+    padding:3px
+  }
+  .contact{
+    font-size:smaller;
+    padding: 3px;
   }
 }

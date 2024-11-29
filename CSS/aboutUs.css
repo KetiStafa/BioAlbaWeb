@@ -29,7 +29,7 @@ html {
 
 .trupi {
   position: relative;
-  z-index: 100;
+  z-index: 20;
   width: 100%;
 
 }
@@ -650,6 +650,33 @@ html {
   .howWeWork{
     padding-bottom: 8vh;
   }
+ .heading-container{
+  margin-bottom: 10vh;
+  padding-bottom: 20vh;
+ }
+ .contWhereWeOp{
+  margin-top: 20vh;
+ }
+ .whereWeOperate{
+  padding-top: 10vh;
+ }
+ .otherServices h2{
+  font-size: 1.8rem;
+ }
+ .whereWeOperate h2{
+  font-size: 1.8rem;
+ }
+ .howWeWork{
+  padding-top: 10vh;
+ }
+ .howWeWork h2{
+  font-size: 1.8rem
+ }
+ .ourJourney h2{
+  font-size: 1.8rem;
+ }
+
+  
 }
 
 @media (max-width: 480px) {
