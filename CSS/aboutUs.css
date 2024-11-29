@@ -75,11 +75,19 @@ html {
 
 }
 
-
+/* 
 .icon {
   margin-right: 20px;
-  fill:#707c34
+  fill:#707c34;
+  
+} */
+
+.icon {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(34%) saturate(300%) hue-rotate(45deg) brightness(90%) contrast(95%);
 }
+
+
+
 
 
 
@@ -183,6 +191,8 @@ html {
   filter: invert(100%);
 }
 
+
+
 .content {
   flex: 1;
   color: white;
@@ -212,7 +222,15 @@ html {
   cursor: pointer;
 
 }
-
+.container:hover .title {
+  color:white;
+}
+.container:hover .description {
+  color:white;
+}
+.container:hover .icon{
+  filter: brightness(0) saturate(100%) invert(100%);
+}
 .otherServices {
   padding-top: 50px;
   padding-bottom: 70px;
