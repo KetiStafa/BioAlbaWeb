@@ -172,10 +172,11 @@ body {
   color: white;
 }
 
-.content h5{
+.content h2{
   font-family: "Brush Script MT", cursive;
   font-size: 4vw;
   font-weight: bold;
+  padding-top: 5vh
 }
 
 .content p {
@@ -211,6 +212,16 @@ body {
   text-align: center;
   padding-top: 40px;
 
+}
+.productH2 {
+  text-align: center;
+  margin: 0;
+  color:#707c34;
+  background-color: white;
+  padding-bottom: 25px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 4vw;
+  font-weight: bold;
 }
 
 /* Media query for phones */
@@ -252,6 +263,16 @@ body {
   #load-more {
     max-width: 30% !important;
   }
+  .content h2{
+    font-size: 1.8rem
+  }
+  .underPhoto p{
+    padding: 0 5vw 3vh 5vw;
+  }
+  .productH2{
+    font-size: 2rem;
+    padding-top: 5vh
+  }
 }
 
 /*----------------*/
@@ -271,16 +292,7 @@ body {
 
 
 
-.productH2 {
-  text-align: center;
-  margin: 0;
-  color:#707c34;
-  background-color: white;
-  padding-bottom: 25px;
-  font-family: "Brush Script MT", cursive;
-  font-size: 4vw;
-  font-weight: bold;
-}
+
 
 
 
