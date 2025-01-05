@@ -224,4 +224,12 @@ body {
     font-size:smaller;
     padding: 3px;
   }
+  .logo img{
+    height: 120px;
+    width: 120px;
+    padding-top: 1.5vh;
+  }
+  .nav-bar{
+    justify-content: center;
+  }
 }
