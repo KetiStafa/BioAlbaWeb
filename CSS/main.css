@@ -310,8 +310,8 @@ html{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 10vw;
+    justify-content: left;
+    gap: 5vw;
     max-width: 1200px;
     width: 90%;
     margin-top: 20px;
@@ -350,6 +350,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -1vh
 }
 .CSR h3 {
     color: #f4f4f0;
@@ -383,6 +384,7 @@ html{
     width: 100% !important;
     height: auto !important;
     display: block !important;
+    background: linear-gradient(to top, #b8bc7c 20%, transparent 20%);
 }
 
 .layered-waves1 img{
@@ -627,6 +629,40 @@ body {
       }
       
   }
+
+  /* Styles for iPads in both portrait and landscape */
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .layered-waves1{
+      margin-top: 37vh;
+    }
+    .footer-distributed{
+      margin-top: -1vh;
+    }
+    .sera-container{
+      height: 50vh;
+    }
+    .image-row{
+      gap: 15px;
+    }
+    .right-side h4{
+      font-size: 1.7vw;
+    }
+    .QC p{
+      font-size: 1.6vw;
+    }
+    .Products p{
+      font-size: 1.6vw;
+    }
+    .CSR h4{
+      font-size: 1.7vw;
+    }
+    .CSR p{
+      font-size: 1.6vw;
+    }
+}
+
 
   
   

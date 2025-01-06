@@ -104,6 +104,7 @@ html {
   width: 100% !important;
   height: auto !important;
   display: block !important;
+  background: linear-gradient(to top, #b8bc7c 20%, #ffffff 20%);
 }
 
 .scallop-up{
@@ -115,6 +116,7 @@ html {
   width: 100% !important;
   height: auto !important;
   display: block !important;
+  
 } 
 
 .ourJourney {
@@ -148,6 +150,7 @@ html {
   align-items: center;
   justify-content: space-evenly;
   align-items: stretch;
+  padding-bottom: 5vh;
 
 }
 
@@ -234,11 +237,13 @@ html {
 }
 .otherServices {
   padding-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 15vh;
   text-align: center;
   position: relative;
   z-index: 100;
   background-color: white;
+  margin-top: -1vh;
+  
 }
 
 .otherServices p {
@@ -266,7 +271,9 @@ html {
   justify-content: space-between;
   align-items: flex-start;
   background-color: #707c34;
-  margin-top: 15vw;
+  margin-top: 15vh;
+  padding-top: 15vh;
+  padding-bottom:10vh;
 }
 
 .whereWeOperate {
@@ -325,7 +332,7 @@ html {
   position: relative;
   z-index: 100;
   background-color: white;
-
+  padding: 5vh 0;
 }
 
 .howWeWork .p {
@@ -706,6 +713,19 @@ html {
   z-index: 20;
   background-color: white;
 
+}
+/* Per tableta */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .shkrimi{
+    padding: 80px 8vw;
+  }
+  .icon img{
+    margin-right: 20px;
+  }
+  .containerHowWeWork{
+    gap: 25px;
+    padding: 15px;
+  }
 }
 
 
