@@ -17,6 +17,9 @@ html{
     background-position: center;
     
 }
+body{
+  overflow-x: hidden;
+}
 
 .body-container::before {
     content: "";
