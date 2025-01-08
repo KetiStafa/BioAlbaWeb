@@ -185,3 +185,24 @@ section {
   }
 
 }
+
+/* Per telefon */
+
+@media (max-width: 768px) {
+  .organic{
+    justify-content: center;
+    
+    
+  }
+}
+
+
+.organic{
+  display: flex;
+  gap: 20px;
+}
+.organic img{
+  position: relative;
+  height: 10vh;
+  justify-content: space-around;
+}

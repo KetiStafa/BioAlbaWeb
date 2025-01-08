@@ -1,6 +1,3 @@
-const currentYear = new Date().getFullYear();
-document.getElementById("year").textContent = currentYear;
-
 
 function initMap() {
     const myLatLng = { lat: 41.27421429347341, lng: 19.969875355652274150 };

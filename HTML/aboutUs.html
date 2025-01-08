@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="../CSS/aboutUs.css">
   <link rel="stylesheet" href="../CSS/navbar.css">
   <link rel="stylesheet" href="../CSS/animation.css">
+  <link rel="icon" type="image/png" href="../Photos/logo.png">
   <title>About Us</title>
+  
 </head>
 
 <body>
@@ -357,6 +359,10 @@
     <div class="footer-left">
 
       <img src="../Photos/logo.png" alt="BioAlba Group">
+      <div class="organic">
+        <img src="../Photos/image.jpg" alt="bio">
+        <img src="../Photos/image.png" alt="bio">
+      </div>
     </div>
 
     <div class="footer-center">
@@ -383,10 +389,9 @@
       <p class="footer-company-about">
         <span>About the company</span>
         Bioalba Group is a community of dedicated small and medium sized farmers working relentlessly to produce and
-        cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on producing
-        quality
-        more than quantity, we are committed to promoting organic excellence while contributing to a sustainable and
-        socially responsible future.
+          cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on producing
+          quality more than quantity, we are committed to promoting organic excellence while contributing to a
+          sustainable and socially responsible future.
       </p>
 
       <div class="footer-icons">
@@ -395,16 +400,16 @@
       </div>
 
     </div>
-    <p class="footer-company-name">Copyright © <span id="year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved
+    <p class="footer-company-name">Copyright © <span id="copyright-year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved
     </p>
   </footer>
-
+  <script src="../JS/copyrightYear.js"></script>
   <script src="../JS/main.js"></script>
-  <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">
-    </script>
   <script src="../JS/navbar.js"></script>
+  
+  
   <script>
+    
     document.addEventListener("DOMContentLoaded", function () {
       // Function to check if an element is partially in the viewport (e.g., 40% visible)
       function isElementPartiallyInViewport(el, visibilityRatio = 0.4) {
@@ -437,11 +442,9 @@
 
       // Listen for scroll events
       window.addEventListener('scroll', handleScroll);
-    });
 
 
-
-    window.addEventListener('scroll', function () {
+      window.addEventListener('scroll', function () {
     const firstL = document.querySelector('.firstL');
     const overlay = document.querySelector('.section .overlay');
     const arrow = document.querySelector('#section04 a span');
@@ -469,8 +472,11 @@
 }, { passive: true }); // Mark the event listener as passive
 
 
-
+    });
   </script>
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDCN18aDthxGndyycrp6xR1NQAJpc9FE&loading=async&callback=initMap">
+  </script> 
   
 </body>
 

@@ -1,6 +1,3 @@
-const currentYear = new Date().getFullYear();
-document.getElementById("year").textContent = currentYear;
-
 
 //41.384755, 19.760255
 function initMap2() {
