@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <script src="https://kit.fontawesome.com/f40774f3ad.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../CSS/navbar.css">
-  <link rel="stylesheet" href="../CSS/main.css">
-  <link rel="stylesheet" href="../CSS/footer.css">
-  <link rel="stylesheet" href="../CSS/animation.css">
-  <link rel="icon" type="image/png" href="../Photos/logo.png">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='Photos/logo.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/footer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/animation.css') }}">
   <title>Bioalba</title>
 
 </head>
@@ -24,14 +24,14 @@
                   <a href="tel:+35568206262" class="contact">📞 +355 68 20 622 62</a>
               </div>
           <ul class='nav-bar'>
-              <li class='logo'><a href='#'><img src="../Photos/logo.png" alt="BioAlba Logo"/></a></li>
+              <li class='logo'><a href='#'><img src="{{ url_for('static', filename='Photos/logo.png') }}" alt="BioAlba Logo"></a></li>
               <input type='checkbox' id='check' />
               <span class="menu">
-                <li><a href="../HTML/main.html" data-link="Home">Home</a></li>
-                <li><a href="../HTML/aboutUs.html" data-link="About Us">About Us</a></li>
-                <li><a href="../HTML/csr.html" data-link="CSR">Corporate Social Responsibility</a></li>
-                <li><a href="../HTML/products.html" data-link="Products">Products</a></li>
-                <li><a href="../HTML/contactUs.html" data-link="Contact">Contact Us</a></li>
+                <li><a href="{{ url_for('home') }}" data-link="Home">Home</a></li>
+                <li><a href="{{ url_for('about') }}" data-link="About Us">About Us</a></li>
+                <li><a href="{{ url_for('csr') }}" data-link="CSR">Corporate Social Responsibility</a></li>
+                <li><a href="{{ url_for('products') }}" data-link="Products">Products</a></li>
+                <li><a href="{{ url_for('contact') }}" data-link="Contact">Contact Us</a></li>
                   <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
               </span>
               <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
@@ -50,7 +50,7 @@
           <h2>Welcome to BioAlba Group</h2>
           <h1>Go Organic, <br> Improve Lives</h1>
           <p>We are a community of dedicated small and medium-sized farmers and pickers, working relentlessly to cultivate and collect the finest organic herbs, flowers, leaves, and roots.</p>
-          <a href="../HTML/aboutUs.html" class="about-button">Learn More About Us</a>
+          <a href="{{ url_for('about') }}" class="about-button">Learn More About Us</a>
       </div>
   </div>
      
@@ -65,16 +65,16 @@
   
   <div class="image-row">
     <div class="image-box">
-      <img src="../Photos/gjethe.jpg" alt="Image 1">
+      <img src="{{ url_for('static',filename='Photos/gjethe.jpg') }}" alt="Image 1">
     </div>
     <div class="image-box">
-      <img src="../Photos/flower.jpg" alt="Image 2">
+      <img src="{{ url_for('static',filename='Photos/flower.jpg') }}" alt="Image 2">
     </div>
     <div class="image-box">
-      <img src="../Photos/root.jpg" alt="Image 3">
+      <img src="{{ url_for('static',filename='Photos/root.jpg') }}" alt="Image 3">
     </div>
     <div class="image-box">
-      <img src="../Photos/erza.jpg" alt="Image 4">
+      <img src="{{ url_for('static',filename='Photos/erza.jpg') }}" alt="Image 4">
     </div>
   </div>
   
@@ -84,12 +84,12 @@
   
 
   <div class="QC">
-    <a href="../HTML/products.html" class="product-button">Discover More </a>
+    <a href="{{ url_for('products') }}" class="product-button">Discover More </a>
     <h3>Quality Control</h3>
     <div class="content">
 
       <div class="eco">
-        <img src="../Photos/eco.png" alt="alt">
+        <img src="{{ url_for('static',filename='Photos/eco.png') }}" alt="alt">
         
        </div>
        <div class="right-side">
@@ -121,16 +121,16 @@
             the environment. Our environmentally friendly approach is socially 
           focused in that we support local farmers and community organizations. </p>
       </div>
-      <a href="../HTML/csr.html" class="csr-button">Discover more</a>
+      <a href="{{ url_for('csr') }}" class="csr-button">Discover more</a>
     </div>
 
     
     <div class="sera-container">
       <div class="layered-waves1">
-        <img src="../Photos/screenshot.png" alt="Layered Waves Top">
+        <img src="{{ url_for('static',filename='Photos/screenshot.png') }}" alt="Layered Waves Top">
       </div>
       <div class="layered-waves">
-        <img src="../Photos/screenshot.png" alt="Layered Waves Bottom">
+        <img src="{{ url_for('static',filename='Photos/screenshot.png') }}" alt="Layered Waves Bottom">
       </div>
       
       
@@ -142,10 +142,10 @@
 
     <div class="footer-left">
 
-      <img src="../Photos/logo.png" alt="BioAlba Group">
+      <img src="{{ url_for('static',filename='Photos/logo.png') }}" alt="BioAlba Group">
       <div class="organic">
-        <img src="../Photos/image.jpg" alt="bio">
-        <img src="../Photos/image.png" alt="bio">
+        <img src="{{ url_for('static',filename='Photos/image.jpg') }}" alt="bio">
+        <img src="{{ url_for('static',filename='Photos/image.png') }}" alt="bio">
       </div>
     </div>
 
@@ -190,8 +190,8 @@
     </div>
     <p class="footer-company-name">Copyright © <span id="copyright-year"></span> | BioAlba Group | All Rights Reserved</p>
   </footer>
-  <script src="../JS/navbar.js"></script>
-  <script src="../JS/copyrightYear.js"></script>
+  <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/copyrightYear.js') }}"></script>
   
 </body>
 </html>

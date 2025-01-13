@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function sendEmail(name, lastName, email, phone, message) {
         Email.send({
             Host: "smtp.elasticemail.com",
-            Username: "angjelo.goga@gmail.com",
-            Password: "7C90EBF886090B59397874A2B6DCF6F460C5",
-            To: 'angjelo.goga@gmail.com',
-            From: "angjelo.goga@gmail.com",
+            Username: "ketstafa6@gmail.com",
+            Password: "C487886262B15056F1D7E8D84687B1BEA086",
+            To: 'ketstafa6@gmail.com',
+            From: "ketstafa6@gmail.com",
             Subject: "New Contact Form Submission",
             Body: `
                 <html>

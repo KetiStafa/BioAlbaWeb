@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/csr.css">
-    <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../CSS/animation.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/csr.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/footer.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/animation.css') }}">
     <title>Corporate Social Responsibility</title>
     <link rel="icon" type="image/png" href="../Photos/logo.png">
 </head>
@@ -27,14 +28,14 @@
                     <a href="tel:+35568206262" class="contact">📞 +355 68 20 622 62</a>
                 </div>
             <ul class='nav-bar'>
-                <li class='logo'><a href='#'><img src="../Photos/logo.png" alt="BioAlba Logo"/></a></li>
+                <li class='logo'><a href='#'><img src="{{ url_for('static', filename='Photos/logo.png') }}" alt="BioAlba Logo"></a></li>
                 <input type='checkbox' id='check' />
                 <span class="menu">
-                    <li><a href="../HTML/main.html" aria-label="Home">Home</a></li>
-                    <li><a href="../HTML/aboutUs.html" aria-label="About Us">About Us</a></li>
-                    <li><a href="../HTML/csr.html" aria-label="Corporate Social Responsibility">Corporate Social Responsibility</a></li>
-                    <li><a href="../HTML/products.html" aria-label="Products">Products</a></li>
-                    <li><a href="../HTML/contactUs.html" aria-label="Contact Us">Contact Us</a></li>
+                    <li><a href="{{ url_for('home') }}" data-link="Home">Home</a></li>
+                    <li><a href="{{ url_for('about') }}" data-link="About Us">About Us</a></li>
+                    <li><a href="{{ url_for('csr') }}" data-link="CSR">Corporate Social Responsibility</a></li>
+                    <li><a href="{{ url_for('products') }}" data-link="Products">Products</a></li>
+                    <li><a href="{{ url_for('contact') }}" data-link="Contact">Contact Us</a></li>
                     <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
                 </span>
                 <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
@@ -77,7 +78,7 @@
         </div>
     </div>
 
-    <div class="separator"><img src="../Photos/layeredWavesWhite.png" alt="layeredWavesWhite"></div>
+    <div class="separator"><img src="{{ url_for('static', filename='Photos/layeredWavesWhite.png') }}" alt="layeredWavesWhite"></div>
 
 
 
@@ -122,7 +123,7 @@
              through it, contributing to environmental protection.</h4> -->
 
         <div class="scallop-up">
-            <img src="../Photos/screenshot.png" alt="alt">
+            <img src="{{ url_for('static', filename='Photos/screenshot.png') }}" alt="alt">
         </div>
 
         <h3 class="h3">More Than Clients: Our Farmers Are Our Partners</h3>
@@ -130,7 +131,7 @@
         <div class="split-container">
             <div class="image-container">
 
-                <img src="../Photos/holdingPlant2Brush1.png" alt="Hand holding organic seeds" class="responsive-image">
+                <img src="{{ url_for('static', filename='Photos/holdingPlant2Brush1.png') }}" alt="Hand holding organic seeds" class="responsive-image">
             </div>
             <div class="text-container">
                 <h4>Our Dedication to Organic Excellence</h4>
@@ -144,7 +145,7 @@
         </div>
 
         <div class="scallop-down">
-            <img src="../Photos/screenshot.png" alt="alt">
+            <img src="{{ url_for('static', filename='Photos/screenshot.png') }}" alt="alt">
         </div>
     </div>
 
@@ -155,11 +156,11 @@
             <p>Join us on this journey, where farmers are partners, social responsibility is paramount,
                 and our commitment to organic excellence is unwavering.
                 Together, we cultivate a sustainable and healthier future.</p>
-            <a href="../HTML/contactUs.html"><button class="cButton">Contact Us</button></a>
+            <a href="{{ url_for('contact') }}"><button class="cButton">Contact Us</button></a>
 
         </div>
         <div class="image-content">
-            <img src="../Photos/helpingHands_resized.png" alt="Hand holding organic seeds">
+            <img src="{{ url_for('static', filename='Photos/helpingHands_resized.png') }}" alt="Hand holding organic seeds">
         </div>
     </div>
 </div>
@@ -168,10 +169,10 @@
 
         <div class="footer-left">
 
-            <img src="../Photos/logo.png" alt="BioAlba Group">
+            <img src="{{ url_for('static', filename='Photos/logo.png') }}" alt="BioAlba Group">
             <div class="organic">
-                <img src="../Photos/image.jpg" alt="bio">
-                <img src="../Photos/image.png" alt="bio">
+                <img src="{{ url_for('static', filename='Photos/image.jpg') }}" alt="bio">
+                <img src="{{ url_for('static', filename='Photos/image.png') }}" alt="bio">
               </div>
         </div>
 
@@ -213,7 +214,7 @@
         <p class="footer-company-name">Copyright © <span id="copyright-year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved
         </p>
     </footer>
-    <script src="../JS/copyrightYear.js"></script>
+    <script src="{{ url_for('static', filename='JS/copyrightYear.js') }}"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Function to check if an element is in the viewport
@@ -281,7 +282,7 @@
 
 </body>
 
-<script src="../JS/navbar.js"></script>
+<script src="{{ url_for('static', filename='JS/navbar.js') }}"></script>
 
 
 </html>

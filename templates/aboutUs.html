@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/f40774f3ad.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Wire+One|Raleway:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../CSS/footer.css">
-  <link rel="stylesheet" href="../CSS/aboutUs.css">
-  <link rel="stylesheet" href="../CSS/navbar.css">
-  <link rel="stylesheet" href="../CSS/animation.css">
-  <link rel="icon" type="image/png" href="../Photos/logo.png">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='Photos/logo.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/footer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/animation.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/aboutUs.css') }}">
   <title>About Us</title>
   
 </head>
@@ -29,14 +29,14 @@
             <a href="tel:+35568206262" class="contact">📞 +355 68 20 622 62</a>
         </div>
       <ul class='nav-bar'>
-        <li class='logo'><a href='#'><img src="../Photos/logo.png" alt="BioAlba Logo"/></a></li>
+        <li class='logo'><a href='#'><img src="{{ url_for('static', filename='Photos/logo.png') }}" alt="BioAlba Logo"></a></li>
         <input type='checkbox' id='check' />
         <span class="menu">
-          <li><a href="../HTML/main.html" aria-label="Home">Home</a></li>
-          <li><a href="../HTML/aboutUs.html" aria-label="About Us">About Us</a></li>
-          <li><a href="../HTML/csr.html" aria-label="Corporate Social Responsibility">Corporate Social Responsibility</a></li>
-          <li><a href="../HTML/products.html" aria-label="Products">Products</a></li>
-          <li><a href="../HTML/contactUs.html" aria-label="Contact Us">Contact Us</a></li>
+          <li><a href="{{ url_for('home') }}" data-link="Home">Home</a></li>
+          <li><a href="{{ url_for('about') }}" data-link="About Us">About Us</a></li>
+          <li><a href="{{ url_for('csr') }}" data-link="CSR">Corporate Social Responsibility</a></li>
+          <li><a href="{{ url_for('products') }}" data-link="Products">Products</a></li>
+          <li><a href="{{ url_for('contact') }}" data-link="Contact">Contact Us</a></li>
           <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
         </span>
         <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
@@ -58,7 +58,7 @@
     </div>
   </div>
   
-  <div class="separator"><img src="../Photos/layeredWavesWhite.png" alt="alt"></div>
+  <div class="separator"><img src="{{ url_for('static', filename='Photos/layeredWavesWhite.png') }}" alt="alt"></div>
 
 
   <div class="heading-container is-animated shkrimi" id="firstImage">
@@ -67,7 +67,7 @@
 
       <!-- Fermer -->
       <div class="icon-container slide">
-        <img src="../Photos/farmer64.png" alt="farmer" class="icon">
+        <img src="{{ url_for('static', filename='Photos/farmer64.png') }}" alt="farmer" class="icon">
         <p class="p1">Bioalba Group is a community of dedicated small and medium sized farmers working relentlessly
           to
           produce and cultivate the finest organic herbs, flowers, leaves, roots, and more. With a primary focus on
@@ -79,7 +79,7 @@
 
       <!--Organic  -->
       <div class="icon-container slide">
-        <img src="../Photos/organic64.png" alt="organic logo" class="icon">
+        <img src="{{ url_for('static', filename='Photos/organic64.png') }}" alt="organic logo" class="icon">
         <p class="p2">We are an environmentally friendly company exporting predominantly to the European market,
           and the only company in Albania focused 100% on organic production. </p>
       </div>
@@ -88,7 +88,7 @@
 
       <!--Njerez  -->
       <div class="icon-container slide">
-        <img src="../Photos/people64.png" alt="people" class="icon">
+        <img src="{{ url_for('static', filename='Photos/people64.png') }}" alt="people" class="icon">
         <p class="p3">Bioalba is more than just an organic medicinal plants producer and exporter
           – Our environmentally friendly approach is socially focused in that we support local organizations,
           local farmers and their families. </p>
@@ -98,7 +98,7 @@
 
       <!-- ...  -->
       <div class="icon-container slide">
-        <img src="../Photos/value64.png" alt="values icon" class="icon">
+        <img src="{{ url_for('static', filename='Photos/value64.png') }}" alt="values icon" class="icon">
         <p class="p4">We represent a group of organic farmers and pickers
           who share similar values to ours and similar objectives in securing
           a wide variety of organic products,
@@ -109,7 +109,7 @@
 
       <!--Parcel  -->
       <div class="icon-container slide">
-        <img src="../Photos/wheat64.png" alt="yield" class="icon">
+        <img src="{{ url_for('static', filename='Photos/wheat64.png') }}" alt="yield" class="icon">
 
         <p class="p5">To maximize yield and efficiency, we gather small farmers into groups,
           allowing them to pool their resources and cultivate larger parcels collectively.
@@ -120,7 +120,7 @@
 
       <!--Kuti  -->
       <div class="icon-container slide">
-        <img src="../Photos/box64.png" alt="package" class="icon">
+        <img src="{{ url_for('static', filename='Photos/box64.png') }}" alt="package" class="icon">
         <p class="p6">With a diverse portofolio of over 100 products coming from cultivation and wild collection
           practice. </p>
       </div>
@@ -128,7 +128,7 @@
 
       <!--Tick  -->
       <div class="icon-container slide">
-        <img src="../Photos/tick64.png" id="checkmark" class="icon">
+        <img src="{{ url_for('static', filename='Photos/tick64.png') }}" id="checkmark" class="icon">
 
         <p class="p7">Our focus is on bringing wild collection plants into the
           cultivation practices in order to ensure quality,
@@ -144,7 +144,7 @@
     <!-------------------------------- Our Journey ------------------------------------>
 
     <div class="scallop-up">
-      <img src="../Photos/screenshot.png" alt="alt">
+      <img src="{{ url_for('static', filename='Photos/screenshot.png') }}" alt="alt">
     </div>
 
 
@@ -164,7 +164,7 @@
         <div class="container slideM">
           <div class="icon">
 
-            <img src="../Photos/farmer64.png" alt="farmer">
+            <img src="{{ url_for('static', filename='Photos/farmer64.png') }}" alt="farmer">
 
           </div>
           <div class="content">
@@ -180,7 +180,7 @@
         <div class="container">
           <div class="icon">
 
-            <img src="../Photos/plant64.png" alt="Plant">
+            <img src="{{ url_for('static', filename='Photos/plant64.png') }}" alt="Plant">
 
           </div>
           <div class="content">
@@ -194,7 +194,7 @@
         <div class="container">
           <div class="icon">
 
-            <img src="../Photos/handshake64.png" alt="Help">
+            <img src="{{ url_for('static', filename='Photos/handshake64.png') }}" alt="Help">
 
           </div>
           <div class="content">
@@ -210,7 +210,7 @@
         <div class="container">
           <div class="icon">
 
-            <img src="../Photos/shield64.png" alt="Trustworthy">
+            <img src="{{ url_for('static', filename='Photos/shield64.png') }}" alt="Trustworthy">
 
           </div>
           <div class="content">
@@ -224,7 +224,7 @@
         <div class="container">
           <div class="icon">
 
-            <img src="../Photos/settings64.png" alt="Quality">
+            <img src="{{ url_for('static', filename='Photos/settings64.png') }}" alt="Quality">
 
           </div>
           <div class="content">
@@ -239,7 +239,7 @@
 
       </div>
       <div class="scallop-down">
-        <img src="../Photos/screenshot.png" alt="alt">
+        <img src="{{ url_for('static', filename='Photos/screenshot.png') }}" alt="alt">
       </div>
 
 
@@ -289,7 +289,7 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
 
-              <img src="../Photos/foto1.jpeg" alt="Avatar" class="image">
+              <img src="{{ url_for('static', filename='Photos/foto1.jpeg') }}" alt="Avatar" class="image">
               <h3 class="h3CardFront">Clear Work System</h3>
 
             </div>
@@ -308,7 +308,7 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
 
-              <img src="../Photos/foto2.jpeg" alt="Avatar" class="image">
+              <img src="{{ url_for('static', filename='Photos/foto2.jpeg') }}" alt="Avatar" class="image">
               <h3 class="h3CardFront">Community Coordination</h3>
 
             </div>
@@ -328,7 +328,7 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
 
-              <img src="../Photos/foto3.jpeg" alt="Avatar" class="image">
+              <img src="{{ url_for('static', filename='Photos/foto3.jpeg') }}" alt="Avatar" class="image">
               <h3 class="h3CardFront">Certification and Analysis</h3>
 
             </div>
@@ -358,10 +358,10 @@
 
     <div class="footer-left">
 
-      <img src="../Photos/logo.png" alt="BioAlba Group">
+      <img src="{{ url_for('static', filename='Photos/logo.png') }}" alt="BioAlba Group">
       <div class="organic">
-        <img src="../Photos/image.jpg" alt="bio">
-        <img src="../Photos/image.png" alt="bio">
+        <img src="{{ url_for('static', filename='Photos/image.jpg') }}" alt="bio">
+        <img src="{{ url_for('static', filename='Photos/image.png') }}" alt="bio">
       </div>
     </div>
 
@@ -403,9 +403,10 @@
     <p class="footer-company-name">Copyright © <span id="copyright-year"></span> | BioAlba Group Sh.P.K. | All Rights Reserved
     </p>
   </footer>
-  <script src="../JS/copyrightYear.js"></script>
-  <script src="../JS/main.js"></script>
-  <script src="../JS/navbar.js"></script>
+  <script src="{{ url_for('static', filename='JS/copyrightYear.js') }}"></script>
+  <script src="{{ url_for('static', filename='JS/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='JS/navbar.js') }}"></script>
+
   
   
   <script>
