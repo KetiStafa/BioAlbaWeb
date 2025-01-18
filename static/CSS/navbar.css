@@ -103,16 +103,7 @@ body {
 
 }
 
-.menu li a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color:#707c34;
-  transition: 0.15s ease-in-out;
-}
+
 
 .menu li a:hover:after {
   width: 100%;
